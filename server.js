@@ -16,7 +16,7 @@ app.get('/event', function(req, res) {
         boolean = req.query.color;
 
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-      client.query('INSERT INTO items(text, complete) values($1, $2)',[name,boolean], function(err, result) {
+      client.query('INSERT INTO test_events(text, complete) values($1, $2)',[name,boolean], function(err, result) {
         done();
         if (err)
          { console.error(err); response.send("Error " + err); }
