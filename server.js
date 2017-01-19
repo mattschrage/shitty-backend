@@ -27,7 +27,7 @@ app.get('/event', function(req, res) {
     // ...
 });
 
-app.get('/init', function(req, res) {
+app.get('/initialize', function(req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     client.query('CREATE TABLE test_events(id SERIAL PRIMARY KEY, text VARCHAR(40) not null, complete BOOLEAN)', function(err, result) {
       done();
