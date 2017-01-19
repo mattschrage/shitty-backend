@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
-app.use(express.json());
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 
 var pg = require('pg');
 //var bodyParser = require('body-parser')
