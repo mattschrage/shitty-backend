@@ -52,7 +52,8 @@ app.get('/db', function (req, res) {
       if (err)
        { console.error(err); res.send("Error " + err); }
       else
-       { res.send(result.rows}
+       { console.log(result);
+         res.send(result);}
     });
   });
 });
