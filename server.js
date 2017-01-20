@@ -51,7 +51,17 @@ app.get('/init', function(req, res) {
 
 app.get('/feed', function(req, res) {
 
-    res.send('Hello world');
+  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    client.query('SELECT * FROM events', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       { console.log(result["rows"]);
+       var payload = {"sectionTitles":["Today"],"sections":[result["rows"]]}
+         res.send(payload);}
+    });
+  });
 });
 
 app.get('/db', function (req, res) {
