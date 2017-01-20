@@ -13,10 +13,18 @@ var pg = require('pg');
 //query for get; body for post
 app.get('/event', function(req, res) {
     var name = req.query.name,
-        boolean = req.query.color;
-    console.log(name, boolean);
+        icon = req.query.icon,
+        startDate = req.query.startDate,
+        endDate = req.query.endDate,
+        details = req.query.details,
+        hostName = req.query.hostName,
+        locationName = req.query.locationName,
+        location = req.query.location,
+        color = req.query.color,
+
+    console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-      client.query('INSERT INTO test_events(text, complete) values($1, $2)',[name,boolean], function(err, result) {
+      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
         done();
         if (err)
          { console.error(err); res.send("Error " + err); }
@@ -29,12 +37,12 @@ app.get('/event', function(req, res) {
 
 app.get('/init', function(req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('CREATE TABLE global_points ( id SERIAL PRIMARY KEY,icon TEXT, name TEXT, details TEXT, hostName TEXT,locationName TEXT,color TEXT,startTime timestampz,location GEOGRAPHY(POINT,4326))', function(err, result) {
+    client.query('CREATE TABLE events ( id SERIAL PRIMARY KEY,icon TEXT, name TEXT, details TEXT, hostName TEXT,locationName TEXT,color TEXT,startDate timestamptz, endDate timestamptz,location GEOGRAPHY(POINT,4326))', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
       else
-       {     res.send('Database (test_events) Initialized!'); }
+       {     res.send('Database (events) Initialized!'); }
     });
   });
 
