@@ -24,7 +24,7 @@ app.get('/event', function(req, res) {
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
+      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
         done();
         if (err)
          { console.error(err); res.send("Error " + err); }
