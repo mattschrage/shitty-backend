@@ -29,7 +29,7 @@ app.get('/event', function(req, res) {
 
 app.get('/init', function(req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('CREATE TABLE test_events(id SERIAL PRIMARY KEY, text VARCHAR(40) not null, complete BOOLEAN)', function(err, result) {
+    client.query('CREATE TABLE global_points ( id SERIAL PRIMARY KEY,icon TEXT, name TEXT, details TEXT, hostName TEXT,locationName TEXT,color TEXT,startTime timestampz,location GEOGRAPHY(POINT,4326))', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
