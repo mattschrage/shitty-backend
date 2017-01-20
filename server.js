@@ -20,9 +20,9 @@ app.get('/event', function(req, res) {
         hostName = req.query.hostName,
         locationName = req.query.locationName,
         location = req.query.location,
-        color = req.query.color,
+        color = req.query.color;
 
-    //console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
+    console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
       client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
         done();
