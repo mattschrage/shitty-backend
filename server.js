@@ -11,17 +11,18 @@ var pg = require('pg');
 
 //app.use(bodyParser.json())
 //query for get; body for post
-app.get('/event', function(req, res) {
-    var name = req.query.name,
-        icon = req.query.icon,
-        startDate = req.query.startDate,
-        endDate = req.query.endDate,
-        details = req.query.details,
-        hostName = req.query.hostName,
-        locationName = req.query.locationName,
-        location = req.query.location,
-        color = req.query.color;
+app.post('/event', function(req, res) {
+    var name = req.body.name,
+        icon = req.body.icon,
+        startDate = req.body.startDate,
+        endDate = req.body.endDate,
+        details = req.body.details,
+        hostName = req.body.hostName,
+        locationName = req.body.locationName,
+        location = req.body.location,
+        color = req.body.color;
 
+    //do some post processing ei. match up Location Name with actual geopoint
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
       client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
