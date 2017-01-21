@@ -100,6 +100,8 @@ app.get('/feed', function(req, res) {
        for (var i = 0; i < result["rows"].length; i++ ) {
          var row = result["rows"][i];
          var date = new Date(JSON.stringify(row["startDate"]));
+         console.log("StartDate:"+row["startDate"]+", Stringify:"+JSON.stringify(row["startDate"]));
+
          var timestamp = date.getTime();
          console.log("Timestamp:"+timestamp+", Today Threshold:"+todayThreshold.getTime());
          if (timestamp <= todayThreshold.getTime()) {
