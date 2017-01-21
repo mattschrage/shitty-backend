@@ -18,11 +18,38 @@ app.post('/event', function(req, res) {
         endDate = req.body.endDate,
         details = req.body.details,
         hostName = req.body.hostName,
-        locationName = req.body.locationName,
+        locationBuilding = req.body.locationBuilding,
+        locationRoom = req.body.locationRoom,
+        locationName = locationBuilding + " " + locationRoom;
         location = req.body.location,
         color = req.body.color;
 
     //do some post processing ei. match up Location Name with actual geopoint
+
+    // set color depending on icon
+    switch (icon) {
+      case "❤️":
+        color = ""
+        break;
+      case "❤️":
+
+        break;
+      default:
+
+    }
+
+    //set geopoint depending on location
+    switch (locationBuilding) {
+      case "❤️":
+        color = ""
+        break;
+      case "❤️":
+
+        break;
+      default:
+
+    }
+
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
       client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
@@ -52,14 +79,40 @@ app.get('/init', function(req, res) {
 app.get('/feed', function(req, res) {
 
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM events', function(err, result) {
+
+    client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
       else
        { console.log(result["rows"]);
-       var payload = {"sectionTitles":["Today"],"sections":[result["rows"]]}
-         res.send(payload);}
+
+       //iterate to seperate into different sections
+       var todayDate = new Date();
+       var tomorrowThreshold = new Date(todayDate.getDate() + 1)
+       var todayThreshold = tomorrowThreshold;
+       todayThreshold.setHours(4,0,0,0);
+       tomorrowThreshold.setHours(0,0,0,0);
+
+       var today = [];
+       var tomorrow = [];
+       var upcoming = [];
+       for (row in result["rows"]) {
+         var timestamp = row["startDate"];
+
+         if (timestamp <= todayThreshold.getTime() / 1000) {
+            today.push(row);
+         } else if (timestamp <= tomorrowThreshold.getTime() / 1000) {
+            tomorrow.push(row);
+         } else {
+            upcoming.push(row);
+         }
+
+       }
+
+       var payload = {"sectionTitles":["Today","Tomorrow","This Week"],"sections":[today, tomorrow, upcoming]}
+         res.send(payload);
+       }
     });
   });
 });
