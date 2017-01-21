@@ -92,7 +92,7 @@ app.get('/feed', function(req, res) {
        var tomorrowThreshold = new Date(todayDate.getDate() + 1)
        var todayThreshold = tomorrowThreshold;
        todayThreshold.setHours(4,0,0,0);
-       tomorrowThreshold.setHours(0,0,0,0);
+       tomorrowThreshold.setHours(24,0,0,0);
 
        var today = [];
        var tomorrow = [];
