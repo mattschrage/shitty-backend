@@ -97,7 +97,8 @@ app.get('/feed', function(req, res) {
        var today = [];
        var tomorrow = [];
        var upcoming = [];
-       for (row in result["rows"]) {
+       for (var i = 0; i < result["rows"].length; i++ ) {
+         var row = result["rows"][i];
          var timestamp = row["startDate"];
          console.log(row);
          if (timestamp <= todayThreshold.getTime() / 1000) {
