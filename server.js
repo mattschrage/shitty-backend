@@ -77,10 +77,10 @@ app.get('/init', function(req, res) {
 });
 
 app.get('/feed', function(req, res) {
-
+  console.log("FEED");
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-
-    client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');', function(err, result) {
+//AND startDate <= (now() + interval \'7 days\')
+    client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\');', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
@@ -99,7 +99,7 @@ app.get('/feed', function(req, res) {
        var upcoming = [];
        for (row in result["rows"]) {
          var timestamp = row["startDate"];
-
+         console.log(row);
          if (timestamp <= todayThreshold.getTime() / 1000) {
             today.push(row);
          } else if (timestamp <= tomorrowThreshold.getTime() / 1000) {
@@ -119,7 +119,7 @@ app.get('/feed', function(req, res) {
 
 app.get('/db', function (req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM events', function(err, result) {
+    client.query('SELECT * FROM events WHERE startDate <= now()', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
