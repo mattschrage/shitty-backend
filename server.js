@@ -99,11 +99,12 @@ app.get('/feed', function(req, res) {
        var upcoming = [];
        for (var i = 0; i < result["rows"].length; i++ ) {
          var row = result["rows"][i];
-         var timestamp = row["startDate"];
+         var date = new Date(row["startDate"]);
+         var timestamp = date.getTime();
          console.log(row);
-         if (timestamp <= todayThreshold.getTime() / 1000) {
+         if (timestamp <= todayThreshold.getTime()) {
             today.push(row);
-         } else if (timestamp <= tomorrowThreshold.getTime() / 1000) {
+         } else if (timestamp <= tomorrowThreshold.getTime()) {
             tomorrow.push(row);
          } else {
             upcoming.push(row);
