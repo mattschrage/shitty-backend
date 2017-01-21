@@ -101,7 +101,7 @@ app.get('/feed', function(req, res) {
          var row = result["rows"][i];
          var date = new Date(row["startDate"]);
          var timestamp = date.getTime();
-         console.log(row);
+         console.log("Timestamp:"+timestamp+", Today Threshold:"+todayThreshold.getTime());
          if (timestamp <= todayThreshold.getTime()) {
             today.push(row);
          } else if (timestamp <= tomorrowThreshold.getTime()) {
