@@ -136,7 +136,8 @@ app.get('/feed', function(req, res) {
   console.log("FEED");
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 //AND startDate <= (now() + interval \'7 days\')
-    client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\');', function(err, result) {
+//WHERE startDate >= (now() - interval \'3 hours\')
+    client.query('SELECT * FROM events;', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
