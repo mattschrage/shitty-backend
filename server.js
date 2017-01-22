@@ -158,7 +158,7 @@ app.get('/feed', function(req, res) {
 
 app.get('/db', function (req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM events', function(err, result) {
+    client.query('SELECT * FROM '+req.query.name, function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
