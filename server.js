@@ -57,7 +57,7 @@ function searchBuildings(name) {
 
 
     for (var building in buildings) {
-      if (building.name && building.name.startsWith(name)) {
+      if (building.name && building.name.substring(0, name.length).toLowerCase() === name.toLowerCase()) {
         console.log(building);
         return {"lat": building.lat,"lon":building.lng};
       }
@@ -81,7 +81,7 @@ app.post('/event', function(req, res) {
         //convert hex to rgb
         var rgb = hexToRgb(req.body.color);
         console.log(rgb);
-        var color  = "" + rgb.r / 100 + " " + rgb.g / 100 + " " + rgb.b / 100 + " " + 1.0;
+        var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
 
     //do some post processing ei. match up Location Name with actual geopoint
       location = searchBuildings(locationBuilding);
