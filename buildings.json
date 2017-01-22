@@ -1,0 +1,4111 @@
+[
+    {
+        "root": "04270",
+        "id": "998",
+        "name": "20 Garden Street",
+        "lat": 42.377629,
+        "lng": -71.123468
+    },
+    {
+        "root": "02582",
+        "id": "561",
+        "name": "Hastings Hall",
+        "lat": 42.377466,
+        "lng": -71.119534
+    },
+    {
+        "root": "04553",
+        "id": "N4553",
+        "name": "155 Fawcett Street",
+        "lat": 42.392937,
+        "lng": -71.148864
+    },
+    {
+        "root": "06131",
+        "id": "749",
+        "name": "21 Robinson Street",
+        "lat": 42.383677,
+        "lng": -71.12662
+    },
+    {
+        "root": "06170",
+        "id": "440A",
+        "name": "5A Sacramento Street",
+        "lat": 42.383064,
+        "lng": -71.118749
+    },
+    {
+        "root": "00470",
+        "id": "495",
+        "name": "Kittredge Hall - Hu Press",
+        "lat": 42.383031,
+        "lng": -71.127026
+    },
+    {
+        "root": "03341",
+        "id": "965",
+        "name": "3 Sacramento Street at Dudley House",
+        "lat": 42.382769,
+        "lng": -71.119099
+    },
+    {
+        "root": "03306",
+        "id": "520E",
+        "name": "Pforzheimer Master's Residence",
+        "lat": 42.382758,
+        "lng": -71.124709
+    },
+    {
+        "root": "06123",
+        "id": "06123",
+        "name": "Botanic Gardens Bldg D",
+        "lat": 42.382561,
+        "lng": -71.126036
+    },
+    {
+        "root": "06121",
+        "id": "06121",
+        "name": "Botanic Gardens Bldg B",
+        "lat": 42.382965,
+        "lng": -71.12541
+    },
+    {
+        "root": "03302",
+        "id": "520B",
+        "name": "Faculty Row, Pforzheimer House",
+        "lat": 42.382494,
+        "lng": -71.125214
+    },
+    {
+        "root": "06128",
+        "id": "06128",
+        "name": "Botanic Gardens Bldg I",
+        "lat": 42.382523,
+        "lng": -71.127029
+    },
+    {
+        "root": "06069",
+        "id": "275",
+        "name": "1607-1615 Massachusetts Avenue",
+        "lat": 42.380148,
+        "lng": -71.119656
+    },
+    {
+        "root": "04275",
+        "id": "327",
+        "name": "34 Kirkland Street",
+        "lat": 42.37652,
+        "lng": -71.113047
+    },
+    {
+        "root": "04196",
+        "id": "665F",
+        "name": "Observatory Garage",
+        "lat": 42.382076,
+        "lng": -71.128649
+    },
+    {
+        "root": "06127",
+        "id": "06127",
+        "name": "Botanic Gardens Bldg H",
+        "lat": 42.3826,
+        "lng": -71.126917
+    },
+    {
+        "root": "03307",
+        "id": "520H",
+        "name": "Wolbach Hall, Pforzheimer House",
+        "lat": 42.382183,
+        "lng": -71.124246
+    },
+    {
+        "root": "03304",
+        "id": "520D",
+        "name": "Jordan South, Pforzheimer House",
+        "lat": 42.381246,
+        "lng": -71.122832
+    },
+    {
+        "root": "03222",
+        "id": "510I",
+        "name": "107 Walker Street, Cabot House",
+        "lat": 42.381885,
+        "lng": -71.123312
+    },
+    {
+        "root": "03243",
+        "id": "500C",
+        "name": "Daniels Hall, Currier House",
+        "lat": 42.381375,
+        "lng": -71.125283
+    },
+    {
+        "root": "03227",
+        "id": "510E",
+        "name": "Eliot Hall, Cabot House",
+        "lat": 42.381034,
+        "lng": -71.12343
+    },
+    {
+        "root": "06175",
+        "id": "596A",
+        "name": "27 Everett Street Garage",
+        "lat": 42.380314,
+        "lng": -71.117667
+    },
+    {
+        "root": "03224",
+        "id": "510B",
+        "name": "Bertram Hall, Cabot House",
+        "lat": 42.380748,
+        "lng": -71.124082
+    },
+    {
+        "root": "02320",
+        "id": "906",
+        "name": "Carriage House",
+        "lat": 42.380684,
+        "lng": -71.112093
+    },
+    {
+        "root": "02318",
+        "id": "905",
+        "name": "Jewett House",
+        "lat": 42.380378,
+        "lng": -71.112264
+    },
+    {
+        "root": "02321",
+        "id": "396",
+        "name": "Center for the Study of World Religions",
+        "lat": 42.380145,
+        "lng": -71.111953
+    },
+    {
+        "root": "03082",
+        "id": "546",
+        "name": "40 Concord Avenue",
+        "lat": 42.379941,
+        "lng": -71.127117
+    },
+    {
+        "root": "04305",
+        "id": "351",
+        "name": "7 Bryant Street",
+        "lat": 42.379827,
+        "lng": -71.110721
+    },
+    {
+        "root": "04285",
+        "id": "328",
+        "name": "5 Bryant Street",
+        "lat": 42.379812,
+        "lng": -71.111605
+    },
+    {
+        "root": "03072",
+        "id": "545",
+        "name": "38 Concord Avenue",
+        "lat": 42.379721,
+        "lng": -71.127247
+    },
+    {
+        "root": "03052",
+        "id": "541",
+        "name": "34 Concord Avenue",
+        "lat": 42.379663,
+        "lng": -71.126602
+    },
+    {
+        "root": "04862",
+        "id": "783",
+        "name": "Perkins Hall",
+        "lat": 42.379311,
+        "lng": -71.116868
+    },
+    {
+        "root": "03062",
+        "id": "542",
+        "name": "36 Concord Avenue",
+        "lat": 42.379605,
+        "lng": -71.127072
+    },
+    {
+        "root": "04863",
+        "id": "781",
+        "name": "Richards Hall",
+        "lat": 42.379193,
+        "lng": -71.11732
+    },
+    {
+        "root": "06133",
+        "id": "918",
+        "name": "29 Garden Street",
+        "lat": 42.378932,
+        "lng": -71.123738
+    },
+    {
+        "root": "04860",
+        "id": "782",
+        "name": "Child Hall",
+        "lat": 42.378952,
+        "lng": -71.118013
+    },
+    {
+        "root": "06085",
+        "id": "223A",
+        "name": "Holden Green Bldg A",
+        "lat": 42.378889,
+        "lng": -71.108354
+    },
+    {
+        "root": "04410",
+        "id": "344",
+        "name": "OEB Greenhouse",
+        "lat": 42.379772,
+        "lng": -71.113999
+    },
+    {
+        "root": "04325",
+        "id": "311",
+        "name": "Biological Laboratory",
+        "lat": 42.378918,
+        "lng": -71.113752
+    },
+    {
+        "root": "04370",
+        "id": "317",
+        "name": "Farlow Herbarium",
+        "lat": 42.379157,
+        "lng": -71.114202
+    },
+    {
+        "root": "02520",
+        "id": "573",
+        "name": "Pound Hall",
+        "lat": 42.378591,
+        "lng": -71.119611
+    },
+    {
+        "root": "06090",
+        "id": "223F",
+        "name": "Holden Green Bldg F",
+        "lat": 42.378507,
+        "lng": -71.107804
+    },
+    {
+        "root": "02516",
+        "id": "572",
+        "name": "Lewis International Law Center",
+        "lat": 42.378198,
+        "lng": -71.119128
+    },
+    {
+        "root": "06087",
+        "id": "223C",
+        "name": "Holden Green Bldg C",
+        "lat": 42.378905,
+        "lng": -71.108219
+    },
+    {
+        "root": "04295",
+        "id": "358",
+        "name": "61 Kirkland Street",
+        "lat": 42.377905,
+        "lng": -71.110206
+    },
+    {
+        "root": "04405",
+        "id": "330",
+        "name": "Music Building",
+        "lat": 42.376824,
+        "lng": -71.117199
+    },
+    {
+        "root": "03870",
+        "id": "854",
+        "name": "Hemenway Gymnasium",
+        "lat": 42.376942,
+        "lng": -71.119499
+    },
+    {
+        "root": "04460",
+        "id": "364",
+        "name": "William James Hall",
+        "lat": 42.377171,
+        "lng": -71.113465
+    },
+    {
+        "root": "02510",
+        "id": "575",
+        "name": "Austin Hall",
+        "lat": 42.377089,
+        "lng": -71.118722
+    },
+    {
+        "root": "00700",
+        "id": "825",
+        "name": "Lippmann House",
+        "lat": 42.377474,
+        "lng": -71.112159
+    },
+    {
+        "root": "03763",
+        "id": "436",
+        "name": "McKay Laboratory, Gordon",
+        "lat": 42.377222,
+        "lng": -71.116366
+    },
+    {
+        "root": "06092",
+        "id": "223H",
+        "name": "Holden Greeen Bldg H",
+        "lat": 42.37854,
+        "lng": -71.107679
+    },
+    {
+        "root": "03372",
+        "id": "249",
+        "name": "Straus Hall",
+        "lat": 42.374131,
+        "lng": -71.118579
+    },
+    {
+        "root": "06007",
+        "id": "363A",
+        "name": "33 Elmwood Barn",
+        "lat": 42.375647,
+        "lng": -71.138752
+    },
+    {
+        "root": "06302",
+        "id": "06302",
+        "name": "15 Hawthorne Street",
+        "lat": 42.375603,
+        "lng": -71.126167
+    },
+    {
+        "root": "04550",
+        "id": "N4550",
+        "name": "1430 Massachusetts Avenue",
+        "lat": 42.374136,
+        "lng": -71.119269
+    },
+    {
+        "root": "04790",
+        "id": "745",
+        "name": "Semitic Museum",
+        "lat": 42.378068,
+        "lng": -71.113903
+    },
+    {
+        "root": "06095",
+        "id": "350",
+        "name": "37-41 Kirkland Street",
+        "lat": 42.377205,
+        "lng": -71.11246
+    },
+    {
+        "root": "00615",
+        "id": "307A",
+        "name": "Sparks House Garage",
+        "lat": 42.376938,
+        "lng": -71.114783
+    },
+    {
+        "root": "04385",
+        "id": "705",
+        "name": "Littauer Center",
+        "lat": 42.376421,
+        "lng": -71.118232
+    },
+    {
+        "root": "00610",
+        "id": "307",
+        "name": "Sparks House",
+        "lat": 42.376803,
+        "lng": -71.115019
+    },
+    {
+        "root": "02512",
+        "id": "576",
+        "name": "Gannett House",
+        "lat": 42.376669,
+        "lng": -71.119258
+    },
+    {
+        "root": "04280",
+        "id": "349",
+        "name": "38 Kirkland Street",
+        "lat": 42.376563,
+        "lng": -71.112634
+    },
+    {
+        "root": "04255",
+        "id": "359",
+        "name": "17 Sumner Road",
+        "lat": 42.37631,
+        "lng": -71.112835
+    },
+    {
+        "root": "06083",
+        "id": "222",
+        "name": "Haskins Hall",
+        "lat": 42.375834,
+        "lng": -71.110573
+    },
+    {
+        "root": "04554",
+        "id": "N4554",
+        "name": "1414 Massachusetts Avenue",
+        "lat": 42.373922,
+        "lng": -71.119548
+    },
+    {
+        "root": "03091",
+        "id": "543",
+        "name": "Byerly Hall",
+        "lat": 42.375926,
+        "lng": -71.121863
+    },
+    {
+        "root": "03111",
+        "id": "558",
+        "name": "Putnam House",
+        "lat": 42.375252,
+        "lng": -71.122495
+    },
+    {
+        "root": "06010",
+        "id": "363B",
+        "name": "33A Elmwood Carriage House",
+        "lat": 42.375725,
+        "lng": -71.138518
+    },
+    {
+        "root": "06102",
+        "id": "592B",
+        "name": "11-33 Shaler Lane",
+        "lat": 42.375562,
+        "lng": -71.131381
+    },
+    {
+        "root": "03373",
+        "id": "955",
+        "name": "Thayer Hall",
+        "lat": 42.375036,
+        "lng": -71.116755
+    },
+    {
+        "root": "00100",
+        "id": "340",
+        "name": "Sackler",
+        "lat": 42.37514,
+        "lng": -71.114051
+    },
+    {
+        "root": "04380",
+        "id": "325",
+        "name": "Holden Chapel",
+        "lat": 42.375264,
+        "lng": -71.118141
+    },
+    {
+        "root": "03369",
+        "id": "225",
+        "name": "Phillips Brooks House",
+        "lat": 42.375618,
+        "lng": -71.117943
+    },
+    {
+        "root": "04445",
+        "id": "337",
+        "name": "University Hall",
+        "lat": 42.374422,
+        "lng": -71.117075
+    },
+    {
+        "root": "03367",
+        "id": "953",
+        "name": "Mower Hall",
+        "lat": 42.37547,
+        "lng": -71.118214
+    },
+    {
+        "root": "03355",
+        "id": "927",
+        "name": "Holworthy Hall",
+        "lat": 42.375468,
+        "lng": -71.11717
+    },
+    {
+        "root": "06103",
+        "id": "592D",
+        "name": "12-24 Shaler Lane",
+        "lat": 42.375388,
+        "lng": -71.131584
+    },
+    {
+        "root": "03371",
+        "id": "954",
+        "name": "Stoughton Hall",
+        "lat": 42.375416,
+        "lng": -71.117723
+    },
+    {
+        "root": "03232",
+        "id": "924B",
+        "name": "Canaday Hall",
+        "lat": 42.37539,
+        "lng": -71.115991
+    },
+    {
+        "root": "04390",
+        "id": "362",
+        "name": "Loeb Drama Center",
+        "lat": 42.374769,
+        "lng": -71.12299
+    },
+    {
+        "root": "02400",
+        "id": "367",
+        "name": "Read House",
+        "lat": 42.375045,
+        "lng": -71.121255
+    },
+    {
+        "root": "02402",
+        "id": "416",
+        "name": "Gutman Library",
+        "lat": 42.374853,
+        "lng": -71.121686
+    },
+    {
+        "root": "02401",
+        "id": "414",
+        "name": "Nichols House",
+        "lat": 42.374912,
+        "lng": -71.121159
+    },
+    {
+        "root": "06293",
+        "id": "06293",
+        "name": "153-155 Mount Auburn Street Carriage House",
+        "lat": 42.374648,
+        "lng": -71.125598
+    },
+    {
+        "root": "04021",
+        "id": "220",
+        "name": "51 Brattle Street",
+        "lat": 42.374448,
+        "lng": -71.121509
+    },
+    {
+        "root": "06251",
+        "id": "06251",
+        "name": "153-155 Mount Auburn Street",
+        "lat": 42.374543,
+        "lng": -71.125455
+    },
+    {
+        "root": "04022",
+        "id": "377",
+        "name": "53 Church Street",
+        "lat": 42.374377,
+        "lng": -71.121059
+    },
+    {
+        "root": "03362",
+        "id": "946",
+        "name": "Lionel Hall",
+        "lat": 42.375117,
+        "lng": -71.118328
+    },
+    {
+        "root": "00600",
+        "id": "305",
+        "name": "Memorial Church Appleton Chapel",
+        "lat": 42.374855,
+        "lng": -71.116108
+    },
+    {
+        "root": "06104",
+        "id": "592C",
+        "name": "2-8 Shaler Lane",
+        "lat": 42.374958,
+        "lng": -71.131628
+    },
+    {
+        "root": "06100",
+        "id": "592A",
+        "name": "1-7 Shaler Lane",
+        "lat": 42.374968,
+        "lng": -71.131424
+    },
+    {
+        "root": "06211",
+        "id": "769",
+        "name": "14 Story Street",
+        "lat": 42.373749,
+        "lng": -71.122529
+    },
+    {
+        "root": "02535",
+        "id": "N2535",
+        "name": "125 Mount Auburn Street",
+        "lat": 42.373567,
+        "lng": -71.123028
+    },
+    {
+        "root": "06006",
+        "id": "102",
+        "name": "Dana Palmer",
+        "lat": 42.37298,
+        "lng": -71.114641
+    },
+    {
+        "root": "03323",
+        "id": "957C",
+        "name": "Wigglesworth Hall C",
+        "lat": 42.372809,
+        "lng": -71.116246
+    },
+    {
+        "root": "06042",
+        "id": "807",
+        "name": "University Place",
+        "lat": 42.372776,
+        "lng": -71.123769
+    },
+    {
+        "root": "06033",
+        "id": "219",
+        "name": "8 Story Street",
+        "lat": 42.373903,
+        "lng": -71.122126
+    },
+    {
+        "root": "03361",
+        "id": "104",
+        "name": "Lehman Hall",
+        "lat": 42.373613,
+        "lng": -71.118491
+    },
+    {
+        "root": "06077",
+        "id": "192",
+        "name": "Manter Hall",
+        "lat": 42.372833,
+        "lng": -71.117934
+    },
+    {
+        "root": "06076",
+        "id": "190",
+        "name": "Fairfax Hall",
+        "lat": 42.372699,
+        "lng": -71.117444
+    },
+    {
+        "root": "06178",
+        "id": "421A",
+        "name": "18 Prescott Street Garage",
+        "lat": 42.373243,
+        "lng": -71.113398
+    },
+    {
+        "root": "06040",
+        "id": "629",
+        "name": "41 Winthrop Street",
+        "lat": 42.371673,
+        "lng": -71.119119
+    },
+    {
+        "root": "04450",
+        "id": "860",
+        "name": "Linden Street Studios",
+        "lat": 42.372274,
+        "lng": -71.117042
+    },
+    {
+        "root": "03212",
+        "id": "910A",
+        "name": "Apthorp House, Adams House",
+        "lat": 42.372179,
+        "lng": -71.11702
+    },
+    {
+        "root": "03284",
+        "id": "940B",
+        "name": "McKinlock Hall, Leverett House",
+        "lat": 42.369863,
+        "lng": -71.117573
+    },
+    {
+        "root": "04315",
+        "id": "320",
+        "name": "77 Dunster Street",
+        "lat": 42.371364,
+        "lng": -71.12
+    },
+    {
+        "root": "03875",
+        "id": "855",
+        "name": "Malkin Athletic Center",
+        "lat": 42.371471,
+        "lng": -71.11944
+    },
+    {
+        "root": "06030",
+        "id": "839",
+        "name": "Advocate Building",
+        "lat": 42.371544,
+        "lng": -71.120486
+    },
+    {
+        "root": "06029",
+        "id": "833",
+        "name": "17-19 South Street",
+        "lat": 42.371502,
+        "lng": -71.120189
+    },
+    {
+        "root": "06168",
+        "id": "410",
+        "name": "101-103 Plympton Street",
+        "lat": 42.370024,
+        "lng": -71.118037
+    },
+    {
+        "root": "06205",
+        "id": "139",
+        "name": "1033 Massachusetts Avenue",
+        "lat": 42.369909,
+        "lng": -71.112056
+    },
+    {
+        "root": "03283",
+        "id": "940A",
+        "name": "Leverett Tower F",
+        "lat": 42.369577,
+        "lng": -71.116389
+    },
+    {
+        "root": "03282",
+        "id": "940D",
+        "name": "Leverett Master's House",
+        "lat": 42.369833,
+        "lng": -71.117063
+    },
+    {
+        "root": "03281",
+        "id": "940C",
+        "name": "Leverett Library Building",
+        "lat": 42.369404,
+        "lng": -71.116817
+    },
+    {
+        "root": "03285",
+        "id": "03285",
+        "name": "Leverett Tower G",
+        "lat": 42.369303,
+        "lng": -71.11606
+    },
+    {
+        "root": "06147",
+        "id": "760",
+        "name": "6.5 Grant Street",
+        "lat": 42.369317,
+        "lng": -71.115166
+    },
+    {
+        "root": "06148",
+        "id": "759",
+        "name": "6 Grant Street",
+        "lat": 42.369293,
+        "lng": -71.115106
+    },
+    {
+        "root": "06107",
+        "id": "425A",
+        "name": "Peabody Terrace Garage",
+        "lat": 42.366405,
+        "lng": -71.11435
+    },
+    {
+        "root": "03356",
+        "id": "929",
+        "name": "House Masters Garages",
+        "lat": 42.370174,
+        "lng": -71.118064
+    },
+    {
+        "root": "04555",
+        "id": "04555",
+        "name": "Rowland Institute",
+        "lat": 42.363434,
+        "lng": -71.077994
+    },
+    {
+        "root": "04551",
+        "id": "N4551",
+        "name": "625 Massachusetts Avenue",
+        "lat": 42.365797,
+        "lng": -71.103042
+    },
+    {
+        "root": "06173",
+        "id": "767",
+        "name": "381-383 Western Avenue",
+        "lat": 42.364555,
+        "lng": -71.114928
+    },
+    {
+        "root": "03865",
+        "id": "865",
+        "name": "Harvard Yacht Club",
+        "lat": 42.360088,
+        "lng": -71.082808
+    },
+    {
+        "root": "06053",
+        "id": "718",
+        "name": "1230 Soldiers Field Road",
+        "lat": 42.364234,
+        "lng": -71.135713
+    },
+    {
+        "root": "04932",
+        "id": "587",
+        "name": "Lamont Library",
+        "lat": 42.372766,
+        "lng": -71.115519
+    },
+    {
+        "root": "06141",
+        "id": "213",
+        "name": "47 Banks Street",
+        "lat": 42.369461,
+        "lng": -71.114782
+    },
+    {
+        "root": "06143",
+        "id": "753A",
+        "name": "2 Grant Street",
+        "lat": 42.36912,
+        "lng": -71.115042
+    },
+    {
+        "root": "06025",
+        "id": "413",
+        "name": "Palfrey House",
+        "lat": 42.380613,
+        "lng": -71.115726
+    },
+    {
+        "root": "04455",
+        "id": "334",
+        "name": "Vanserg Building",
+        "lat": 42.379152,
+        "lng": -71.113213
+    },
+    {
+        "root": "04430",
+        "id": "333",
+        "name": "Shannon Hall",
+        "lat": 42.379146,
+        "lng": -71.112879
+    },
+    {
+        "root": "06276",
+        "id": "06276",
+        "name": "10 Akron Street Garage",
+        "lat": 42.365256,
+        "lng": -71.115603
+    },
+    {
+        "root": "06290",
+        "id": "06290",
+        "name": "28 Hingham Street",
+        "lat": 42.365025,
+        "lng": -71.115137
+    },
+    {
+        "root": "02586",
+        "id": "770",
+        "name": "North Hall",
+        "lat": 42.381358,
+        "lng": -71.119255
+    },
+    {
+        "root": "02589",
+        "id": "02589",
+        "name": "3 Mellen Street",
+        "lat": 42.381078,
+        "lng": -71.119214
+    },
+    {
+        "root": "04560",
+        "id": "04560",
+        "name": "Northwest Building",
+        "lat": 42.379897,
+        "lng": -71.115473
+    },
+    {
+        "root": "01707",
+        "id": "01707",
+        "name": "Blackstone West",
+        "lat": 42.363528,
+        "lng": -71.115749
+    },
+    {
+        "root": "03845",
+        "id": "850",
+        "name": "Lavietes Pavilion",
+        "lat": 42.368157,
+        "lng": -71.125429
+    },
+    {
+        "root": "06244",
+        "id": "06244",
+        "name": "15 Speedway Avenue",
+        "lat": 42.363947,
+        "lng": -71.133216
+    },
+    {
+        "root": "06299",
+        "id": "06299",
+        "name": "1340 Soldiers Field Road",
+        "lat": 42.362903,
+        "lng": -71.141562
+    },
+    {
+        "root": "02700",
+        "id": "726",
+        "name": "Shattuck International House",
+        "lat": 42.341481,
+        "lng": -71.100278
+    },
+    {
+        "root": "06226",
+        "id": "06226",
+        "name": "9 Travis Street",
+        "lat": 42.362719,
+        "lng": -71.128949
+    },
+    {
+        "root": "06197",
+        "id": "06197",
+        "name": "204-206 North Harvard Street",
+        "lat": 42.36281,
+        "lng": -71.129807
+    },
+    {
+        "root": "06260",
+        "id": "06260",
+        "name": "1320 Soldiers Field Road",
+        "lat": 42.362902,
+        "lng": -71.140827
+    },
+    {
+        "root": "06056",
+        "id": "711",
+        "name": "367 Western Avenue",
+        "lat": 42.363024,
+        "lng": -71.138169
+    },
+    {
+        "root": "05095",
+        "id": "258",
+        "name": "Loeb House, HBS",
+        "lat": 42.367308,
+        "lng": -71.124049
+    },
+    {
+        "root": "06291",
+        "id": "06291",
+        "name": "445-447 Western Avenue",
+        "lat": 42.362439,
+        "lng": -71.141616
+    },
+    {
+        "root": "05100",
+        "id": "246",
+        "name": "Wilder's House",
+        "lat": 42.367272,
+        "lng": -71.122099
+    },
+    {
+        "root": "06200",
+        "id": "06200",
+        "name": "273 Western Avenue",
+        "lat": 42.363539,
+        "lng": -71.133446
+    },
+    {
+        "root": "06261",
+        "id": "06261",
+        "name": "135 Western Avenue",
+        "lat": 42.363785,
+        "lng": -71.125774
+    },
+    {
+        "root": "06055",
+        "id": "715",
+        "name": "287 Western Avenue",
+        "lat": 42.363746,
+        "lng": -71.134415
+    },
+    {
+        "root": "06257",
+        "id": "06257",
+        "name": "14 Rena Street",
+        "lat": 42.361219,
+        "lng": -71.128093
+    },
+    {
+        "root": "06263",
+        "id": "06263",
+        "name": "267A Western Avenue",
+        "lat": 42.363679,
+        "lng": -71.133128
+    },
+    {
+        "root": "06298",
+        "id": "06298",
+        "name": "55 Antwerp Street",
+        "lat": 42.359555,
+        "lng": -71.139704
+    },
+    {
+        "root": "06052",
+        "id": "721",
+        "name": "100 Holton Street",
+        "lat": 42.3597,
+        "lng": -71.137787
+    },
+    {
+        "root": "02815",
+        "id": "N2815",
+        "name": "1613 Tremont Street",
+        "lat": 42.333718,
+        "lng": -71.102979
+    },
+    {
+        "root": "02820",
+        "id": "N2820",
+        "name": "708 Huntington Avenue",
+        "lat": 42.33426,
+        "lng": -71.103773
+    },
+    {
+        "root": "02845",
+        "id": "N2845",
+        "name": "90 Smith Street",
+        "lat": 42.33381,
+        "lng": -71.099943
+    },
+    {
+        "root": "06304",
+        "id": "06304",
+        "name": "65-79 Seattle Street",
+        "lat": 42.361339,
+        "lng": -71.12551
+    },
+    {
+        "root": "00025",
+        "id": "136",
+        "name": "1090 Centre Street",
+        "lat": 42.302653,
+        "lng": -71.124905
+    },
+    {
+        "root": "00022",
+        "id": "133",
+        "name": "Cold Storage Building",
+        "lat": 42.302879,
+        "lng": -71.124504
+    },
+    {
+        "root": "00026",
+        "id": "135",
+        "name": "163 Walter Street",
+        "lat": 42.293943,
+        "lng": -71.130382
+    },
+    {
+        "root": "06059",
+        "id": "714",
+        "name": "1120 Soldiers Field Road",
+        "lat": 42.366082,
+        "lng": -71.132102
+    },
+    {
+        "root": "05004",
+        "id": "05004",
+        "name": "25 Travis Street",
+        "lat": 42.362216,
+        "lng": -71.129003
+    },
+    {
+        "root": "02524",
+        "id": "567",
+        "name": "Legal Services Center",
+        "lat": 42.317504,
+        "lng": -71.103335
+    },
+    {
+        "root": "06265",
+        "id": "06265",
+        "name": "90 Seattle St",
+        "lat": 42.36141,
+        "lng": -71.126462
+    },
+    {
+        "root": "06256",
+        "id": "06256",
+        "name": "1330 Soldiers Field Road",
+        "lat": 42.362968,
+        "lng": -71.141229
+    },
+    {
+        "root": "06274",
+        "id": "06274",
+        "name": "501-505 Western Avenue",
+        "lat": 42.361939,
+        "lng": -71.144485
+    },
+    {
+        "root": "06262",
+        "id": "06262",
+        "name": "267 Western Avenue",
+        "lat": 42.363525,
+        "lng": -71.133055
+    },
+    {
+        "root": "06258",
+        "id": "06258",
+        "name": "449-451 Western Avenue",
+        "lat": 42.362451,
+        "lng": -71.141887
+    },
+    {
+        "root": "06250",
+        "id": "06250",
+        "name": "108-120 Holton Street",
+        "lat": 42.360236,
+        "lng": -71.138476
+    },
+    {
+        "root": "00010",
+        "id": "130",
+        "name": "Hunnewell Building",
+        "lat": 42.307385,
+        "lng": -71.120852
+    },
+    {
+        "root": "05533",
+        "id": "601",
+        "name": "Gordon Hall",
+        "lat": 42.335601,
+        "lng": -71.104245
+    },
+    {
+        "root": "05098",
+        "id": "266",
+        "name": "Rock, Arthur Center for Entrepreneurship",
+        "lat": 42.365935,
+        "lng": -71.123303
+    },
+    {
+        "root": "05043",
+        "id": "278",
+        "name": "Hawes Hall",
+        "lat": 42.366213,
+        "lng": -71.121574
+    },
+    {
+        "root": "01330",
+        "id": "983",
+        "name": "Oxford Street Substation",
+        "lat": 42.379375,
+        "lng": -71.115879
+    },
+    {
+        "root": "04559",
+        "id": "04559",
+        "name": "Biological Research Infrastructure",
+        "lat": 42.378734,
+        "lng": -71.113873
+    },
+    {
+        "root": "01395",
+        "id": "01395",
+        "name": "Oxford Street Garage",
+        "lat": 42.380401,
+        "lng": -71.11536
+    },
+    {
+        "root": "02541",
+        "id": "02541",
+        "name": "Wasserstein Hall",
+        "lat": 42.379147,
+        "lng": -71.119179
+    },
+    {
+        "root": "04481",
+        "id": "04481",
+        "name": "Lab for Integrated Science and Engineering ",
+        "lat": 42.377528,
+        "lng": -71.11667
+    },
+    {
+        "root": "02113",
+        "id": "708",
+        "name": "David Rubenstein Building",
+        "lat": 42.371245,
+        "lng": -71.1227
+    },
+    {
+        "root": "00020",
+        "id": "131",
+        "name": "Dana Greenhouse",
+        "lat": 42.303142,
+        "lng": -71.124339
+    },
+    {
+        "root": "06228",
+        "id": "06228",
+        "name": "224 Western Avenue",
+        "lat": 42.362603,
+        "lng": -71.131337
+    },
+    {
+        "root": "03855",
+        "id": "852",
+        "name": "Dillon Field House",
+        "lat": 42.368465,
+        "lng": -71.126025
+    },
+    {
+        "root": "06222",
+        "id": "06222",
+        "name": "288 North Harvard Street",
+        "lat": 42.360425,
+        "lng": -71.128642
+    },
+    {
+        "root": "05537",
+        "id": "605",
+        "name": "Tosteson Medical Education Center",
+        "lat": 42.336989,
+        "lng": -71.104136
+    },
+    {
+        "root": "02860",
+        "id": "723",
+        "name": "1633/1635/1637/1639 Tremont Street",
+        "lat": 42.334037,
+        "lng": -71.10383
+    },
+    {
+        "root": "02805",
+        "id": "N2805",
+        "name": "Landmark Center",
+        "lat": 42.344577,
+        "lng": -71.102594
+    },
+    {
+        "root": "06289",
+        "id": "06289",
+        "name": "182 Western Avenue",
+        "lat": 42.362923,
+        "lng": -71.129358
+    },
+    {
+        "root": "05042",
+        "id": "268",
+        "name": "Cumnock Hall",
+        "lat": 42.365672,
+        "lng": -71.122679
+    },
+    {
+        "root": "06050",
+        "id": "719",
+        "name": "168 Western Avenue",
+        "lat": 42.362883,
+        "lng": -71.128452
+    },
+    {
+        "root": "05096",
+        "id": "261",
+        "name": "Greenhill House",
+        "lat": 42.366731,
+        "lng": -71.121104
+    },
+    {
+        "root": "06272",
+        "id": "06272",
+        "name": "283 Western Avenue",
+        "lat": 42.363691,
+        "lng": -71.134005
+    },
+    {
+        "root": "00015",
+        "id": "137",
+        "name": "Maintenance Building",
+        "lat": 42.307708,
+        "lng": -71.120693
+    },
+    {
+        "root": "05544",
+        "id": "619",
+        "name": "Seeley Mudd",
+        "lat": 42.336553,
+        "lng": -71.104678
+    },
+    {
+        "root": "03840",
+        "id": "867",
+        "name": "Blodgett Pool",
+        "lat": 42.367706,
+        "lng": -71.124904
+    },
+    {
+        "root": "05093",
+        "id": "242",
+        "name": "Dillon House",
+        "lat": 42.366747,
+        "lng": -71.121971
+    },
+    {
+        "root": "06295",
+        "id": "06295",
+        "name": "304 Western Avenue",
+        "lat": 42.362669,
+        "lng": -71.135898
+    },
+    {
+        "root": "05097",
+        "id": "253",
+        "name": "Glass Hall",
+        "lat": 42.367242,
+        "lng": -71.120962
+    },
+    {
+        "root": "06301",
+        "id": "06301",
+        "name": "90 Antwerp Street",
+        "lat": 42.361266,
+        "lng": -71.139426
+    },
+    {
+        "root": "06264",
+        "id": "06264",
+        "name": "267B Western Avenue",
+        "lat": 42.363793,
+        "lng": -71.132966
+    },
+    {
+        "root": "03370",
+        "id": "907",
+        "name": "Quadrangle Athletic Facility",
+        "lat": 42.381478,
+        "lng": -71.126802
+    },
+    {
+        "root": "03245",
+        "id": "500E",
+        "name": "Gilbert Hall, Currier House",
+        "lat": 42.381408,
+        "lng": -71.125759
+    },
+    {
+        "root": "03242",
+        "id": "500H",
+        "name": "Currier House Master's Residence",
+        "lat": 42.381695,
+        "lng": -71.125719
+    },
+    {
+        "root": "03244",
+        "id": "500D",
+        "name": "Entry Building, Currier House",
+        "lat": 42.381781,
+        "lng": -71.125496
+    },
+    {
+        "root": "03241",
+        "id": "500A",
+        "name": "Bingham Hall, Currier House",
+        "lat": 42.381823,
+        "lng": -71.12609
+    },
+    {
+        "root": "03303",
+        "id": "520C",
+        "name": "Holmes Hall, Pforzheimer House",
+        "lat": 42.38216,
+        "lng": -71.125379
+    },
+    {
+        "root": "03305",
+        "id": "520F",
+        "name": "Moors Hall, Pforzheimer House",
+        "lat": 42.382102,
+        "lng": -71.124833
+    },
+    {
+        "root": "03301",
+        "id": "520A",
+        "name": "Comstock Hall, Pforzheimer House",
+        "lat": 42.382512,
+        "lng": -71.12464
+    },
+    {
+        "root": "04191",
+        "id": "665A",
+        "name": "Observatory Bldg A",
+        "lat": 42.381451,
+        "lng": -71.12872
+    },
+    {
+        "root": "04198",
+        "id": "665G",
+        "name": "Observatory Rotunda",
+        "lat": 42.381449,
+        "lng": -71.128342
+    },
+    {
+        "root": "04194",
+        "id": "665D",
+        "name": "Observatory Bldg D",
+        "lat": 42.381683,
+        "lng": -71.12852
+    },
+    {
+        "root": "02580",
+        "id": "566",
+        "name": "Holmes Hall",
+        "lat": 42.379402,
+        "lng": -71.118107
+    },
+    {
+        "root": "02574",
+        "id": "564",
+        "name": "Ames Hall",
+        "lat": 42.379537,
+        "lng": -71.117744
+    },
+    {
+        "root": "02572",
+        "id": "562",
+        "name": "Story Hall",
+        "lat": 42.379556,
+        "lng": -71.118738
+    },
+    {
+        "root": "02514",
+        "id": "578",
+        "name": "Langdell Hall",
+        "lat": 42.377926,
+        "lng": -71.118571
+    },
+    {
+        "root": "04221",
+        "id": "326",
+        "name": "Jefferson Laboratory",
+        "lat": 42.377243,
+        "lng": -71.117545
+    },
+    {
+        "root": "04222",
+        "id": "335",
+        "name": "Lyman Laboratory",
+        "lat": 42.377561,
+        "lng": -71.117142
+    },
+    {
+        "root": "04265",
+        "id": "322",
+        "name": "2 Divinity Avenue Yenching Library",
+        "lat": 42.377592,
+        "lng": -71.113691
+    },
+    {
+        "root": "04132",
+        "id": "313A",
+        "name": "Converse Chemistry Lab",
+        "lat": 42.377361,
+        "lng": -71.115095
+    },
+    {
+        "root": "04145",
+        "id": "332",
+        "name": "Hoffman Laboratory",
+        "lat": 42.37799,
+        "lng": -71.115841
+    },
+    {
+        "root": "04765",
+        "id": "635",
+        "name": "Museum of Comparative Zoology",
+        "lat": 42.378834,
+        "lng": -71.115445
+    },
+    {
+        "root": "04230",
+        "id": "345",
+        "name": "University Herbaria",
+        "lat": 42.379049,
+        "lng": -71.114612
+    },
+    {
+        "root": "04350",
+        "id": "117",
+        "name": "Cea 38 Oxford Street",
+        "lat": 42.379895,
+        "lng": -71.114507
+    },
+    {
+        "root": "02312",
+        "id": "395B",
+        "name": "Andover-Harvard Theological Library",
+        "lat": 42.379635,
+        "lng": -71.113272
+    },
+    {
+        "root": "02311",
+        "id": "395",
+        "name": "Andover Hall",
+        "lat": 42.380016,
+        "lng": -71.113012
+    },
+    {
+        "root": "01398",
+        "id": "01398",
+        "name": "Bike Shelter",
+        "lat": 42.379346,
+        "lng": -71.112897
+    },
+    {
+        "root": "06098",
+        "id": "270",
+        "name": "65 Mount Auburn Street",
+        "lat": 42.372053,
+        "lng": -71.118038
+    },
+    {
+        "root": "02404",
+        "id": "418",
+        "name": "Larsen Hall",
+        "lat": 42.375404,
+        "lng": -71.121309
+    },
+    {
+        "root": "02124",
+        "id": "N2124",
+        "name": "20 University Road",
+        "lat": 42.372222,
+        "lng": -71.123178
+    },
+    {
+        "root": "04558",
+        "id": "N4558",
+        "name": "1 Bow Street",
+        "lat": 42.372232,
+        "lng": -71.116055
+    },
+    {
+        "root": "01850",
+        "id": "N1850",
+        "name": "Agen 25 Mount Auburn Street",
+        "lat": 42.370838,
+        "lng": -71.114913
+    },
+    {
+        "root": "03274",
+        "id": "930C",
+        "name": "Smith Hall, Kirkland House",
+        "lat": 42.370946,
+        "lng": -71.120811
+    },
+    {
+        "root": "03261",
+        "id": "908",
+        "name": "Eliot-Kirkland Link",
+        "lat": 42.370474,
+        "lng": -71.120882
+    },
+    {
+        "root": "03263",
+        "id": "922",
+        "name": "Eliot House",
+        "lat": 42.370225,
+        "lng": -71.121322
+    },
+    {
+        "root": "05589",
+        "id": "N5589",
+        "name": "One Kendall Square",
+        "lat": 42.366892,
+        "lng": -71.090432
+    },
+    {
+        "root": "03343",
+        "id": "361",
+        "name": "5-7 Linden Street",
+        "lat": 42.372554,
+        "lng": -71.117451
+    },
+    {
+        "root": "06062",
+        "id": "273",
+        "name": "Smith Campus Center Shops",
+        "lat": 42.372718,
+        "lng": -71.118871
+    },
+    {
+        "root": "06060",
+        "id": "272",
+        "name": "Smith Campus Center, Bank",
+        "lat": 42.372959,
+        "lng": -71.118184
+    },
+    {
+        "root": "03375",
+        "id": "03375",
+        "name": "Farkas Hall",
+        "lat": 42.3725,
+        "lng": -71.117986
+    },
+    {
+        "root": "06067",
+        "id": "768",
+        "name": "8 Holyoke Street",
+        "lat": 42.372694,
+        "lng": -71.117996
+    },
+    {
+        "root": "03350",
+        "id": "916",
+        "name": "Apley Court at Dudley House",
+        "lat": 42.372355,
+        "lng": -71.118132
+    },
+    {
+        "root": "03351",
+        "id": "917",
+        "name": "Claverly Hall",
+        "lat": 42.372032,
+        "lng": -71.117722
+    },
+    {
+        "root": "06037",
+        "id": "106",
+        "name": "Wadsworth House",
+        "lat": 42.373391,
+        "lng": -71.118131
+    },
+    {
+        "root": "03097",
+        "id": "533",
+        "name": "83 Brattle Street",
+        "lat": 42.375849,
+        "lng": -71.123721
+    },
+    {
+        "root": "02112",
+        "id": "707",
+        "name": "Belfer Center",
+        "lat": 42.3714,
+        "lng": -71.121559
+    },
+    {
+        "root": "03366",
+        "id": "321",
+        "name": "Morton Prince House",
+        "lat": 42.372393,
+        "lng": -71.1138
+    },
+    {
+        "root": "06075",
+        "id": "191",
+        "name": "Hampden Hall",
+        "lat": 42.372394,
+        "lng": -71.116335
+    },
+    {
+        "root": "04471",
+        "id": "04471",
+        "name": "Knafel Building",
+        "lat": 42.375642,
+        "lng": -71.113092
+    },
+    {
+        "root": "06172",
+        "id": "451",
+        "name": "13 Sumner Road",
+        "lat": 42.376164,
+        "lng": -71.112788
+    },
+    {
+        "root": "02240",
+        "id": "378",
+        "name": "Gund Hall",
+        "lat": 42.375947,
+        "lng": -71.113782
+    },
+    {
+        "root": "03365",
+        "id": "952",
+        "name": "Matthews Hall",
+        "lat": 42.37405,
+        "lng": -71.11817
+    },
+    {
+        "root": "03103",
+        "id": "547",
+        "name": "Greenleaf House",
+        "lat": 42.375263,
+        "lng": -71.123655
+    },
+    {
+        "root": "06036",
+        "id": "115",
+        "name": "Doebele House",
+        "lat": 42.372402,
+        "lng": -71.111138
+    },
+    {
+        "root": "03331",
+        "id": "960B",
+        "name": "11 Riverview, Winthrop House",
+        "lat": 42.369868,
+        "lng": -71.118152
+    },
+    {
+        "root": "03313",
+        "id": "969D",
+        "name": "Quincy House Library",
+        "lat": 42.370392,
+        "lng": -71.11698
+    },
+    {
+        "root": "06008",
+        "id": "363C",
+        "name": "33 Elmwood Avenue Small House",
+        "lat": 42.375518,
+        "lng": -71.138523
+    },
+    {
+        "root": "02316",
+        "id": "397",
+        "name": "Rockefeller Hall",
+        "lat": 42.380566,
+        "lng": -71.113169
+    },
+    {
+        "root": "06112",
+        "id": "425F",
+        "name": "Peabody Terrace Bldg E",
+        "lat": 42.366387,
+        "lng": -71.115223
+    },
+    {
+        "root": "06280",
+        "id": "06280",
+        "name": "Peabody Terrace Bldg Y",
+        "lat": 42.366237,
+        "lng": -71.114993
+    },
+    {
+        "root": "06110",
+        "id": "425D",
+        "name": "Peabody Terrace Bldg C",
+        "lat": 42.366963,
+        "lng": -71.114588
+    },
+    {
+        "root": "06279",
+        "id": "06279",
+        "name": "Peabody Terrace Bldg X",
+        "lat": 42.36682,
+        "lng": -71.114541
+    },
+    {
+        "root": "06108",
+        "id": "425B",
+        "name": "Peabody Terrace Bldg A",
+        "lat": 42.366911,
+        "lng": -71.113805
+    },
+    {
+        "root": "04933",
+        "id": "588",
+        "name": "Pusey Library",
+        "lat": 42.373212,
+        "lng": -71.115808
+    },
+    {
+        "root": "04935",
+        "id": "585",
+        "name": "Widener Library",
+        "lat": 42.373522,
+        "lng": -71.11644
+    },
+    {
+        "root": "03322",
+        "id": "957B",
+        "name": "Wigglesworth Hall B",
+        "lat": 42.373056,
+        "lng": -71.11715
+    },
+    {
+        "root": "01393",
+        "id": "982",
+        "name": "Widener Gate Lodge",
+        "lat": 42.372903,
+        "lng": -71.116769
+    },
+    {
+        "root": "06064",
+        "id": "366",
+        "name": "32-42 Church Street",
+        "lat": 42.374263,
+        "lng": -71.120351
+    },
+    {
+        "root": "01392",
+        "id": "107",
+        "name": "Johnston Gate House",
+        "lat": 42.374691,
+        "lng": -71.118422
+    },
+    {
+        "root": "06048",
+        "id": "717",
+        "name": "28 Travis Street",
+        "lat": 42.362065,
+        "lng": -71.127723
+    },
+    {
+        "root": "05024",
+        "id": "279",
+        "name": "Spangler Center",
+        "lat": 42.365032,
+        "lng": -71.122286
+    },
+    {
+        "root": "06246",
+        "id": "06246",
+        "name": "114 Western Avenue",
+        "lat": 42.363189,
+        "lng": -71.124528
+    },
+    {
+        "root": "06206",
+        "id": "06206",
+        "name": "400 Soldiers Field Road Garage",
+        "lat": 42.359805,
+        "lng": -71.118193
+    },
+    {
+        "root": "06202",
+        "id": "06202",
+        "name": "400 Soldiers Field Road Hotel",
+        "lat": 42.360271,
+        "lng": -71.1181
+    },
+    {
+        "root": "01389",
+        "id": "01389",
+        "name": "Cowperthwaite Garage",
+        "lat": 42.369021,
+        "lng": -71.115343
+    },
+    {
+        "root": "05090",
+        "id": "244",
+        "name": "Ludcke House",
+        "lat": 42.367415,
+        "lng": -71.12285
+    },
+    {
+        "root": "05094",
+        "id": "252",
+        "name": "Connell House",
+        "lat": 42.367015,
+        "lng": -71.123293
+    },
+    {
+        "root": "05099",
+        "id": "259",
+        "name": "Wyss Hall",
+        "lat": 42.367797,
+        "lng": -71.123803
+    },
+    {
+        "root": "05003",
+        "id": "269",
+        "name": "Shad Hall",
+        "lat": 42.366428,
+        "lng": -71.124674
+    },
+    {
+        "root": "05092",
+        "id": "262",
+        "name": "Cotting House",
+        "lat": 42.36704,
+        "lng": -71.124504
+    },
+    {
+        "root": "06118",
+        "id": "870A",
+        "name": "Soldiers Field Park 1",
+        "lat": 42.365918,
+        "lng": -71.119996
+    },
+    {
+        "root": "06115",
+        "id": "870B",
+        "name": "Soldiers Field Park 2",
+        "lat": 42.36544,
+        "lng": -71.119946
+    },
+    {
+        "root": "05060",
+        "id": "251",
+        "name": "Gallatin Hall",
+        "lat": 42.367118,
+        "lng": -71.123148
+    },
+    {
+        "root": "05000",
+        "id": "241",
+        "name": "Baker Library/Bloomberg",
+        "lat": 42.366435,
+        "lng": -71.122789
+    },
+    {
+        "root": "06220",
+        "id": "06220",
+        "name": "One Western Avenue",
+        "lat": 42.364711,
+        "lng": -71.118993
+    },
+    {
+        "root": "05041",
+        "id": "264",
+        "name": "McCollum Center",
+        "lat": 42.367242,
+        "lng": -71.120153
+    },
+    {
+        "root": "03885",
+        "id": "119",
+        "name": "Murr Building",
+        "lat": 42.367405,
+        "lng": -71.125719
+    },
+    {
+        "root": "03910",
+        "id": "859",
+        "name": "Stadium",
+        "lat": 42.366468,
+        "lng": -71.127008
+    },
+    {
+        "root": "05063",
+        "id": "257",
+        "name": "Morris Hall",
+        "lat": 42.367422,
+        "lng": -71.123984
+    },
+    {
+        "root": "05091",
+        "id": "245",
+        "name": "Morgan Hall",
+        "lat": 42.366694,
+        "lng": -71.123898
+    },
+    {
+        "root": "01300",
+        "id": "980",
+        "name": "175 North Harvard Street Building and Gr",
+        "lat": 42.364193,
+        "lng": -71.129425
+    },
+    {
+        "root": "06270",
+        "id": "06270",
+        "name": "210 North Harvard Street",
+        "lat": 42.362536,
+        "lng": -71.130044
+    },
+    {
+        "root": "05001",
+        "id": "845",
+        "name": "Teele Hall",
+        "lat": 42.362928,
+        "lng": -71.131855
+    },
+    {
+        "root": "06271",
+        "id": "06271",
+        "name": "277-279 Western Avenue",
+        "lat": 42.36352,
+        "lng": -71.133737
+    },
+    {
+        "root": "06057",
+        "id": "712",
+        "name": "370 Western Avenue",
+        "lat": 42.360985,
+        "lng": -71.137455
+    },
+    {
+        "root": "06259",
+        "id": "06259",
+        "name": "1300 Soldiers Field Road",
+        "lat": 42.363044,
+        "lng": -71.140298
+    },
+    {
+        "root": "06255",
+        "id": "06255",
+        "name": "1284 Soldiers Field Road",
+        "lat": 42.363001,
+        "lng": -71.139678
+    },
+    {
+        "root": "06268",
+        "id": "06268",
+        "name": "1380 Soldiers Field Road",
+        "lat": 42.362524,
+        "lng": -71.142985
+    },
+    {
+        "root": "06266",
+        "id": "06266",
+        "name": "206-208 Everett Street",
+        "lat": 42.360106,
+        "lng": -71.136826
+    },
+    {
+        "root": "03262",
+        "id": "922A",
+        "name": "Eliot House Master's Residence",
+        "lat": 42.370054,
+        "lng": -71.12045
+    },
+    {
+        "root": "03272",
+        "id": "930B",
+        "name": "Hicks House, Kirkland House",
+        "lat": 42.371417,
+        "lng": -71.120772
+    },
+    {
+        "root": "04310",
+        "id": "415",
+        "name": "74 Mount Auburn Street",
+        "lat": 42.371726,
+        "lng": -71.118555
+    },
+    {
+        "root": "05540",
+        "id": "614",
+        "name": "641 Huntington Avenue",
+        "lat": 42.335742,
+        "lng": -71.101036
+    },
+    {
+        "root": "05542",
+        "id": "616",
+        "name": "160-164 Longwood Avenue",
+        "lat": 42.335965,
+        "lng": -71.100839
+    },
+    {
+        "root": "05536",
+        "id": "604",
+        "name": "Armenise",
+        "lat": 42.336484,
+        "lng": -71.102986
+    },
+    {
+        "root": "05599",
+        "id": "05599",
+        "name": "Wyss Institute at CISB",
+        "lat": 42.339025,
+        "lng": -71.104243
+    },
+    {
+        "root": "05762",
+        "id": "355",
+        "name": "School Of Dental Medicine",
+        "lat": 42.336205,
+        "lng": -71.10198
+    },
+    {
+        "root": "05539",
+        "id": "613",
+        "name": "180 Longwood Avenue",
+        "lat": 42.336105,
+        "lng": -71.101387
+    },
+    {
+        "root": "06275",
+        "id": "06275",
+        "name": "176 Lincoln Street",
+        "lat": 42.358399,
+        "lng": -71.138191
+    },
+    {
+        "root": "05552",
+        "id": "686",
+        "name": "Underground Parking EQRF",
+        "lat": 42.336444,
+        "lng": -71.103719
+    },
+    {
+        "root": "02870",
+        "id": "N2870",
+        "name": "1552-1556 Tremont Street",
+        "lat": 42.332656,
+        "lng": -71.101005
+    },
+    {
+        "root": "06101",
+        "id": "06101",
+        "name": "170 Brookline Avenue",
+        "lat": 42.344186,
+        "lng": -71.101377
+    },
+    {
+        "root": "null",
+        "id": "00029",
+        "name": "Grandstand",
+        "lat": 42.366355,
+        "lng": -71.128945
+    },
+    {
+        "root": "00012",
+        "id": "00012",
+        "name": "Weld Hill Research and Admin Building",
+        "lat": 42.295782,
+        "lng": -71.133172
+    },
+    {
+        "root": "01702",
+        "id": "01702",
+        "name": "Blackstone North",
+        "lat": 42.364191,
+        "lng": -71.115074
+    },
+    {
+        "root": "02850",
+        "id": "N2850",
+        "name": "841 Parker Street",
+        "lat": 42.327571,
+        "lng": -71.099981
+    },
+    {
+        "root": "02875",
+        "id": "N2875",
+        "name": "Simmons",
+        "lat": 42.339245,
+        "lng": -71.100249
+    },
+    {
+        "root": "05765",
+        "id": "05765",
+        "name": "New Dental Research Building",
+        "lat": 42.335858,
+        "lng": -71.102377
+    },
+    {
+        "root": "03892",
+        "id": "856B",
+        "name": "Newell Boat House Addition",
+        "lat": 42.369886,
+        "lng": -71.126003
+    },
+    {
+        "root": "00021",
+        "id": "138",
+        "name": "Bonsai House",
+        "lat": 42.303335,
+        "lng": -71.124034
+    },
+    {
+        "root": "02840",
+        "id": "N2840",
+        "name": "718 Huntington Avenue",
+        "lat": 42.334104,
+        "lng": -71.104299
+    },
+    {
+        "root": "02830",
+        "id": "N2830",
+        "name": "716 Huntington Avenue",
+        "lat": 42.334179,
+        "lng": -71.104102
+    },
+    {
+        "root": "05543",
+        "id": "618",
+        "name": "LHRRB",
+        "lat": 42.336015,
+        "lng": -71.105051
+    },
+    {
+        "root": "06089",
+        "id": "223E",
+        "name": "Holden Green Bldg E",
+        "lat": 42.379035,
+        "lng": -71.108011
+    },
+    {
+        "root": "06091",
+        "id": "223G",
+        "name": "Holden Green Bldg G",
+        "lat": 42.37906,
+        "lng": -71.107883
+    },
+    {
+        "root": "06080",
+        "id": "426C",
+        "name": "Beckwith Circle Bldg C",
+        "lat": 42.382069,
+        "lng": -71.11189
+    },
+    {
+        "root": "06079",
+        "id": "426B",
+        "name": "Beckwith Circle Bldg B",
+        "lat": 42.382103,
+        "lng": -71.111635
+    },
+    {
+        "root": "06081",
+        "id": "426D",
+        "name": "Beckwith Circle Bldg D",
+        "lat": 42.382202,
+        "lng": -71.111474
+    },
+    {
+        "root": "06078",
+        "id": "426A",
+        "name": "Beckwith Circle Bldg A",
+        "lat": 42.382174,
+        "lng": -71.111768
+    },
+    {
+        "root": "06082",
+        "id": "426E",
+        "name": "Beckwith Circle Bldg E",
+        "lat": 42.382292,
+        "lng": -71.111618
+    },
+    {
+        "root": "06294",
+        "id": "06294",
+        "name": "273 Rear Western Avenue",
+        "lat": 42.363673,
+        "lng": -71.13343
+    },
+    {
+        "root": "05595",
+        "id": "05595",
+        "name": "Hms Data Center at One Summer Street",
+        "lat": 42.354581,
+        "lng": -71.059897
+    },
+    {
+        "root": "05594",
+        "id": "05594",
+        "name": "1542 Tremont Street",
+        "lat": 42.332442,
+        "lng": -71.100593
+    },
+    {
+        "root": "02825",
+        "id": "N2825",
+        "name": "25 Wigglesworth Street",
+        "lat": 42.33452,
+        "lng": -71.102633
+    },
+    {
+        "root": "02410",
+        "id": "N2410",
+        "name": "44 Brattle Street",
+        "lat": 42.373716,
+        "lng": -71.121926
+    },
+    {
+        "root": "01396",
+        "id": "01396",
+        "name": "One Western Avenue Garage",
+        "lat": 42.364735,
+        "lng": -71.118828
+    },
+    {
+        "root": "01397",
+        "id": "01397",
+        "name": "Everett Street Northwest Corner Garage",
+        "lat": 42.379663,
+        "lng": -71.119378
+    },
+    {
+        "root": "04199",
+        "id": "N4199",
+        "name": "160 Concord Avenue",
+        "lat": 42.381754,
+        "lng": -71.130776
+    },
+    {
+        "root": "05534",
+        "id": "602",
+        "name": "Goldenson Building",
+        "lat": 42.335826,
+        "lng": -71.103392
+    },
+    {
+        "root": "03852",
+        "id": "868",
+        "name": "Bright Rink Refrigeration",
+        "lat": 42.368634,
+        "lng": -71.12666
+    },
+    {
+        "root": "03900",
+        "id": "863",
+        "name": "Palmer Dixon Courts",
+        "lat": 42.368941,
+        "lng": -71.126812
+    },
+    {
+        "root": "03891",
+        "id": "856",
+        "name": "Newell Boat House",
+        "lat": 42.369675,
+        "lng": -71.125832
+    },
+    {
+        "root": "03851",
+        "id": "862",
+        "name": "Bright Hockey Center",
+        "lat": 42.368412,
+        "lng": -71.127452
+    },
+    {
+        "root": "03860",
+        "id": "864",
+        "name": "Gordon Track and Tennis Center",
+        "lat": 42.368016,
+        "lng": -71.12828
+    },
+    {
+        "root": "06126",
+        "id": "06126",
+        "name": "Botanic Gardens Bldg G",
+        "lat": 42.383447,
+        "lng": -71.12619
+    },
+    {
+        "root": "06196",
+        "id": "129",
+        "name": "Botanic Gardens Childcare Center",
+        "lat": 42.383189,
+        "lng": -71.126596
+    },
+    {
+        "root": "06120",
+        "id": "112A",
+        "name": "Botanic Gardens Bldg A",
+        "lat": 42.383525,
+        "lng": -71.125527
+    },
+    {
+        "root": "06122",
+        "id": "06122",
+        "name": "Botanic Gardens Bldg C",
+        "lat": 42.38291,
+        "lng": -71.126062
+    },
+    {
+        "root": "03246",
+        "id": "500G",
+        "name": "Tuchman Hall, Currier House",
+        "lat": 42.382102,
+        "lng": -71.125878
+    },
+    {
+        "root": "06225",
+        "id": "06225",
+        "name": "60 Oxford Street",
+        "lat": 42.38045,
+        "lng": -71.116125
+    },
+    {
+        "root": "02588",
+        "id": "02588",
+        "name": "Baker Hall",
+        "lat": 42.380973,
+        "lng": -71.119167
+    },
+    {
+        "root": "02587",
+        "id": "02587",
+        "name": "1637 Massachusetts Avenue",
+        "lat": 42.381016,
+        "lng": -71.119456
+    },
+    {
+        "root": "06027",
+        "id": "440",
+        "name": "5 Sacramento Street",
+        "lat": 42.382786,
+        "lng": -71.118795
+    },
+    {
+        "root": "03340",
+        "id": "968",
+        "name": "1705 Massachusetts Avenue, Dudley House",
+        "lat": 42.383295,
+        "lng": -71.119174
+    },
+    {
+        "root": "06161",
+        "id": "371",
+        "name": "10 Mellen Street",
+        "lat": 42.38061,
+        "lng": -71.118788
+    },
+    {
+        "root": "06162",
+        "id": "372",
+        "name": "12 Mellen Street",
+        "lat": 42.380581,
+        "lng": -71.118635
+    },
+    {
+        "root": "06163",
+        "id": "373",
+        "name": "14-16 Mellen Street",
+        "lat": 42.380586,
+        "lng": -71.118411
+    },
+    {
+        "root": "06164",
+        "id": "374",
+        "name": "18-18A Mellen Street",
+        "lat": 42.380539,
+        "lng": -71.118147
+    },
+    {
+        "root": "06165",
+        "id": "375",
+        "name": "20 Mellen Street",
+        "lat": 42.380564,
+        "lng": -71.118007
+    },
+    {
+        "root": "06217",
+        "id": "596",
+        "name": "27 Everett Street",
+        "lat": 42.380079,
+        "lng": -71.117614
+    },
+    {
+        "root": "02532",
+        "id": "579",
+        "name": "23 Everett Street",
+        "lat": 42.380105,
+        "lng": -71.117988
+    },
+    {
+        "root": "06105",
+        "id": "595",
+        "name": "Terry Terrace",
+        "lat": 42.380175,
+        "lng": -71.118374
+    },
+    {
+        "root": "02522",
+        "id": "568",
+        "name": "Hauser Hall",
+        "lat": 42.378631,
+        "lng": -71.118147
+    },
+    {
+        "root": "03762",
+        "id": "111",
+        "name": "Maxwell-Dworkin",
+        "lat": 42.378725,
+        "lng": -71.117354
+    },
+    {
+        "root": "02315",
+        "id": "785",
+        "name": "Divinity Hall",
+        "lat": 42.378581,
+        "lng": -71.114284
+    },
+    {
+        "root": "04395",
+        "id": "331",
+        "name": "Lowell Lecture Hall",
+        "lat": 42.376649,
+        "lng": -71.11545
+    },
+    {
+        "root": "00107",
+        "id": "475",
+        "name": "Adolphus Busch Hall",
+        "lat": 42.376933,
+        "lng": -71.114234
+    },
+    {
+        "root": "04320",
+        "id": "385",
+        "name": "9 Kirkland Place",
+        "lat": 42.377813,
+        "lng": -71.113259
+    },
+    {
+        "root": "04400",
+        "id": "105",
+        "name": "Memorial Hall",
+        "lat": 42.375949,
+        "lng": -71.115111
+    },
+    {
+        "root": "04260",
+        "id": "846",
+        "name": "1727 Cambridge Street",
+        "lat": 42.375464,
+        "lng": -71.112872
+    },
+    {
+        "root": "06212",
+        "id": "847",
+        "name": "3 Sumner Road",
+        "lat": 42.375716,
+        "lng": -71.112778
+    },
+    {
+        "root": "02241",
+        "id": "848",
+        "name": "7 Sumner Road",
+        "lat": 42.375867,
+        "lng": -71.112833
+    },
+    {
+        "root": "06183",
+        "id": "424",
+        "name": "85-95 Prescott Street",
+        "lat": 42.374811,
+        "lng": -71.113752
+    },
+    {
+        "root": "00108",
+        "id": "877",
+        "name": "1746 Cambridge Street",
+        "lat": 42.375161,
+        "lng": -71.113648
+    },
+    {
+        "root": "03376",
+        "id": "03376",
+        "name": "113 Walker Street",
+        "lat": 42.382042,
+        "lng": -71.12354
+    },
+    {
+        "root": "03226",
+        "id": "510D",
+        "name": "Cabot Hall, Cabot House",
+        "lat": 42.381815,
+        "lng": -71.123936
+    },
+    {
+        "root": "03229",
+        "id": "510J",
+        "name": "Whitman Hall, Cabot House",
+        "lat": 42.381426,
+        "lng": -71.123577
+    },
+    {
+        "root": "04861",
+        "id": "04861",
+        "name": "Conant Hall",
+        "lat": 42.379426,
+        "lng": -71.116255
+    },
+    {
+        "root": "03352",
+        "id": "925",
+        "name": "Grays Hall",
+        "lat": 42.373605,
+        "lng": -71.117863
+    },
+    {
+        "root": "04375",
+        "id": "324",
+        "name": "Harvard Hall",
+        "lat": 42.374818,
+        "lng": -71.118161
+    },
+    {
+        "root": "03354",
+        "id": "926",
+        "name": "Hollis Hall",
+        "lat": 42.374975,
+        "lng": -71.11785
+    },
+    {
+        "root": "04330",
+        "id": "312",
+        "name": "Boylston Hall",
+        "lat": 42.373351,
+        "lng": -71.1173
+    },
+    {
+        "root": "04931",
+        "id": "586",
+        "name": "Houghton Library",
+        "lat": 42.373151,
+        "lng": -71.115837
+    },
+    {
+        "root": "04365",
+        "id": "319",
+        "name": "Emerson Hall",
+        "lat": 42.373836,
+        "lng": -71.115206
+    },
+    {
+        "root": "03374",
+        "id": "956",
+        "name": "Weld Hall",
+        "lat": 42.373918,
+        "lng": -71.117101
+    },
+    {
+        "root": "02403",
+        "id": "417",
+        "name": "Longfellow Hall",
+        "lat": 42.37544,
+        "lng": -71.121939
+    },
+    {
+        "root": "04023",
+        "id": "N4023",
+        "name": "1 Story Street",
+        "lat": 42.374267,
+        "lng": -71.122119
+    },
+    {
+        "root": "02121",
+        "id": "N2121",
+        "name": "1 Brattle Square",
+        "lat": 42.373204,
+        "lng": -71.121477
+    },
+    {
+        "root": "06023",
+        "id": "389",
+        "name": "126 Mount Auburn Street",
+        "lat": 42.373428,
+        "lng": -71.123777
+    },
+    {
+        "root": "04340",
+        "id": "341",
+        "name": "Carpenter Center",
+        "lat": 42.373565,
+        "lng": -71.114293
+    },
+    {
+        "root": "06179",
+        "id": "421",
+        "name": "18 Prescott Street",
+        "lat": 42.373322,
+        "lng": -71.113644
+    },
+    {
+        "root": "06180",
+        "id": "420",
+        "name": "16 Prescott Street",
+        "lat": 42.373194,
+        "lng": -71.113664
+    },
+    {
+        "root": "06182",
+        "id": "423",
+        "name": "22-24 Prescott Street",
+        "lat": 42.373786,
+        "lng": -71.11353
+    },
+    {
+        "root": "06174",
+        "id": "752",
+        "name": "472-474 Broadway",
+        "lat": 42.374001,
+        "lng": -71.113416
+    },
+    {
+        "root": "04415",
+        "id": "376",
+        "name": "Robinson Hall",
+        "lat": 42.374681,
+        "lng": -71.114957
+    },
+    {
+        "root": "03234",
+        "id": "924C",
+        "name": "Canaday Hall C",
+        "lat": 42.375122,
+        "lng": -71.115627
+    },
+    {
+        "root": "03231",
+        "id": "924A",
+        "name": "Canaday Hall A",
+        "lat": 42.375269,
+        "lng": -71.116268
+    },
+    {
+        "root": "06026",
+        "id": "103",
+        "name": "Loeb House, 17 Quincy Street",
+        "lat": 42.373458,
+        "lng": -71.115315
+    },
+    {
+        "root": "00951",
+        "id": "875",
+        "name": "Faculty Club",
+        "lat": 42.373227,
+        "lng": -71.114249
+    },
+    {
+        "root": "04122",
+        "id": "339",
+        "name": "Barker Center, Warren House",
+        "lat": 42.372947,
+        "lng": -71.1142
+    },
+    {
+        "root": "04121",
+        "id": "895",
+        "name": "Barker Center, Union/Burr",
+        "lat": 42.372492,
+        "lng": -71.11459
+    },
+    {
+        "root": "04115",
+        "id": "958",
+        "name": "8 Prescott St",
+        "lat": 42.372541,
+        "lng": -71.113849
+    },
+    {
+        "root": "06038",
+        "id": "832",
+        "name": "7 Ware Street",
+        "lat": 42.372374,
+        "lng": -71.11344
+    },
+    {
+        "root": "03360",
+        "id": "937",
+        "name": "Hurlbut Hall",
+        "lat": 42.372123,
+        "lng": -71.113933
+    },
+    {
+        "root": "03368",
+        "id": "959",
+        "name": "Pennypacker Hall",
+        "lat": 42.372098,
+        "lng": -71.113617
+    },
+    {
+        "root": "06068",
+        "id": "189",
+        "name": "1201 Massachusetts Ave",
+        "lat": 42.371913,
+        "lng": -71.114716
+    },
+    {
+        "root": "02780",
+        "id": "730",
+        "name": "22 Plympton Street",
+        "lat": 42.371956,
+        "lng": -71.116403
+    },
+    {
+        "root": "03213",
+        "id": "910C",
+        "name": "Randolph Hall, Adams House",
+        "lat": 42.371896,
+        "lng": -71.117142
+    },
+    {
+        "root": "02770",
+        "id": "343",
+        "name": "9 Bow Street",
+        "lat": 42.371842,
+        "lng": -71.115815
+    },
+    {
+        "root": "06041",
+        "id": "756",
+        "name": "65-67 Winthrop Street",
+        "lat": 42.372063,
+        "lng": -71.119995
+    },
+    {
+        "root": "03342",
+        "id": "919",
+        "name": "53 Dunster Street, Dudley House",
+        "lat": 42.371961,
+        "lng": -71.11978
+    },
+    {
+        "root": "03344",
+        "id": "342",
+        "name": "54 Dunster Street",
+        "lat": 42.371799,
+        "lng": -71.119354
+    },
+    {
+        "root": "06219",
+        "id": "06219",
+        "name": "90 Mount Auburn Street",
+        "lat": 42.372231,
+        "lng": -71.119891
+    },
+    {
+        "root": "06022",
+        "id": "970",
+        "name": "78 Mount Auburn Street",
+        "lat": 42.371956,
+        "lng": -71.119144
+    },
+    {
+        "root": "03292",
+        "id": "947A",
+        "name": "Lowell Master's House",
+        "lat": 42.370767,
+        "lng": -71.119068
+    },
+    {
+        "root": "03333",
+        "id": "960C",
+        "name": "Standish Hall, Winthrop House",
+        "lat": 42.370306,
+        "lng": -71.119896
+    },
+    {
+        "root": "03334",
+        "id": "960D",
+        "name": "Winthrop Master's House",
+        "lat": 42.370043,
+        "lng": -71.12008
+    },
+    {
+        "root": "03915",
+        "id": "861",
+        "name": "Weld Boat House",
+        "lat": 42.369406,
+        "lng": -71.12213
+    },
+    {
+        "root": "04290",
+        "id": "329",
+        "name": "60 Kennedy Street",
+        "lat": 42.371618,
+        "lng": -71.120581
+    },
+    {
+        "root": "04300",
+        "id": "369",
+        "name": "69 Dunster Street",
+        "lat": 42.371546,
+        "lng": -71.119966
+    },
+    {
+        "root": "03332",
+        "id": "960A",
+        "name": "Gore Hall, Winthrop House",
+        "lat": 42.370226,
+        "lng": -71.118661
+    },
+    {
+        "root": "04552",
+        "id": "N4552",
+        "name": "59 Plympton Street",
+        "lat": 42.371252,
+        "lng": -71.11739
+    },
+    {
+        "root": "03311",
+        "id": "969A",
+        "name": "Quincy House, Stone Hall",
+        "lat": 42.370476,
+        "lng": -71.11738
+    },
+    {
+        "root": "06134",
+        "id": "872",
+        "name": "10 Dewolfe Street",
+        "lat": 42.370441,
+        "lng": -71.116216
+    },
+    {
+        "root": "06135",
+        "id": "873",
+        "name": "20 Dewolfe Street",
+        "lat": 42.370039,
+        "lng": -71.11645
+    },
+    {
+        "root": "06138",
+        "id": "202",
+        "name": "4-6 Athens Terrace",
+        "lat": 42.370096,
+        "lng": -71.115091
+    },
+    {
+        "root": "06136",
+        "id": "200",
+        "name": "1-2 Athens Terrace",
+        "lat": 42.369903,
+        "lng": -71.115317
+    },
+    {
+        "root": "06139",
+        "id": "211",
+        "name": "33-35 Banks Street",
+        "lat": 42.369914,
+        "lng": -71.114729
+    },
+    {
+        "root": "06282",
+        "id": "06282",
+        "name": "37-39 Banks Street",
+        "lat": 42.369721,
+        "lng": -71.114744
+    },
+    {
+        "root": "06284",
+        "id": "06284",
+        "name": "3 Grant Street",
+        "lat": 42.369543,
+        "lng": -71.114926
+    },
+    {
+        "root": "06140",
+        "id": "212",
+        "name": "41-43 Banks Street",
+        "lat": 42.369581,
+        "lng": -71.114714
+    },
+    {
+        "root": "06287",
+        "id": "06287",
+        "name": "9 Grant Street",
+        "lat": 42.369639,
+        "lng": -71.115277
+    },
+    {
+        "root": "06285",
+        "id": "06285",
+        "name": "5 Grant Street",
+        "lat": 42.369602,
+        "lng": -71.115155
+    },
+    {
+        "root": "06288",
+        "id": "06288",
+        "name": "11 Grant Street",
+        "lat": 42.369696,
+        "lng": -71.115505
+    },
+    {
+        "root": "06152",
+        "id": "763",
+        "name": "17 Grant Street",
+        "lat": 42.369718,
+        "lng": -71.115668
+    },
+    {
+        "root": "06151",
+        "id": "764",
+        "name": "17 Grant Street Garage",
+        "lat": 42.369801,
+        "lng": -71.115575
+    },
+    {
+        "root": "06267",
+        "id": "06267",
+        "name": "59 Banks Street",
+        "lat": 42.369212,
+        "lng": -71.114821
+    },
+    {
+        "root": "06142",
+        "id": "753",
+        "name": "4 Grant Street",
+        "lat": 42.369245,
+        "lng": -71.115001
+    },
+    {
+        "root": "06149",
+        "id": "761",
+        "name": "8 Grant Street",
+        "lat": 42.369341,
+        "lng": -71.115283
+    },
+    {
+        "root": "06150",
+        "id": "762",
+        "name": "12-12.5 Grant Street",
+        "lat": 42.369384,
+        "lng": -71.115415
+    },
+    {
+        "root": "06199",
+        "id": "06199",
+        "name": "16 Grant Street",
+        "lat": 42.369406,
+        "lng": -71.115549
+    },
+    {
+        "root": "06283",
+        "id": "06283",
+        "name": "69 Banks Street",
+        "lat": 42.368858,
+        "lng": -71.114843
+    },
+    {
+        "root": "06277",
+        "id": "06277",
+        "name": "5 Cowperthwaite Street",
+        "lat": 42.369053,
+        "lng": -71.115474
+    },
+    {
+        "root": "03251",
+        "id": "920",
+        "name": "Dunster House",
+        "lat": 42.368608,
+        "lng": -71.116199
+    },
+    {
+        "root": "03364",
+        "id": "991",
+        "name": "Mather House",
+        "lat": 42.368156,
+        "lng": -71.115238
+    },
+    {
+        "root": "06144",
+        "id": "214",
+        "name": "118 Banks Street and 23-25 Flagg Street",
+        "lat": 42.367826,
+        "lng": -71.114553
+    },
+    {
+        "root": "06281",
+        "id": "06281",
+        "name": "Peabody Terrace Bldg Z",
+        "lat": 42.367005,
+        "lng": -71.115466
+    },
+    {
+        "root": "06208",
+        "id": "06208",
+        "name": "30 Hingham Street",
+        "lat": 42.364833,
+        "lng": -71.115155
+    },
+    {
+        "root": "01703",
+        "id": "01703",
+        "name": "Blackstone South",
+        "lat": 42.363559,
+        "lng": -71.114934
+    },
+    {
+        "root": "06292",
+        "id": "06292",
+        "name": "8A Mount Auburn Street",
+        "lat": 42.369709,
+        "lng": -71.113972
+    },
+    {
+        "root": "06096",
+        "id": "381",
+        "name": "4-6 Mount Auburn Street",
+        "lat": 42.370043,
+        "lng": -71.113852
+    },
+    {
+        "root": "06097",
+        "id": "382",
+        "name": "8-10 Mount Auburn Street",
+        "lat": 42.370136,
+        "lng": -71.114131
+    },
+    {
+        "root": "06204",
+        "id": "06204",
+        "name": "Oberon",
+        "lat": 42.37081,
+        "lng": -71.114442
+    },
+    {
+        "root": "03353",
+        "id": "935",
+        "name": "Greenough Hall",
+        "lat": 42.37292,
+        "lng": -71.11385
+    },
+    {
+        "root": "06186",
+        "id": "835A",
+        "name": "15 Ware Street Garage",
+        "lat": 42.373086,
+        "lng": -71.113356
+    },
+    {
+        "root": "01200",
+        "id": "N1200",
+        "name": "10 Ware Street",
+        "lat": 42.372469,
+        "lng": -71.112631
+    },
+    {
+        "root": "06189",
+        "id": "838",
+        "name": "19 Ware Street",
+        "lat": 42.373336,
+        "lng": -71.112978
+    },
+    {
+        "root": "06187",
+        "id": "835",
+        "name": "15 Ware Street",
+        "lat": 42.373058,
+        "lng": -71.113094
+    },
+    {
+        "root": "06188",
+        "id": "836",
+        "name": "17 Ware Street",
+        "lat": 42.373174,
+        "lng": -71.113016
+    },
+    {
+        "root": "06181",
+        "id": "422",
+        "name": "20-20A Prescott Street",
+        "lat": 42.373529,
+        "lng": -71.11352
+    },
+    {
+        "root": "01391",
+        "id": "113",
+        "name": "Broadway Garage",
+        "lat": 42.374503,
+        "lng": -71.11285
+    },
+    {
+        "root": "04472",
+        "id": "04472",
+        "name": "CGIS South",
+        "lat": 42.374882,
+        "lng": -71.113153
+    },
+    {
+        "root": "03221",
+        "id": "510H",
+        "name": "103 Walker Street, Cabot House",
+        "lat": 42.38171,
+        "lng": -71.123166
+    },
+    {
+        "root": "03247",
+        "id": "500F",
+        "name": "Jordan North, Currier House",
+        "lat": 42.381503,
+        "lng": -71.123057
+    },
+    {
+        "root": "02243",
+        "id": "02243",
+        "name": "9 Ash Street",
+        "lat": 42.375337,
+        "lng": -71.124905
+    },
+    {
+        "root": "03105",
+        "id": "548",
+        "name": "Knafel Center",
+        "lat": 42.376211,
+        "lng": -71.122699
+    },
+    {
+        "root": "03107",
+        "id": "553",
+        "name": "Alumnae House",
+        "lat": 42.375799,
+        "lng": -71.123532
+    },
+    {
+        "root": "03109",
+        "id": "555",
+        "name": "Buckingham House",
+        "lat": 42.375513,
+        "lng": -71.122849
+    },
+    {
+        "root": "03101",
+        "id": "544",
+        "name": "Fay House",
+        "lat": 42.376237,
+        "lng": -71.122336
+    },
+    {
+        "root": "02405",
+        "id": "574",
+        "name": "Westengard House 3 Garden Street",
+        "lat": 42.375775,
+        "lng": -71.121027
+    },
+    {
+        "root": "03022",
+        "id": "531",
+        "name": "Cronkhite Center",
+        "lat": 42.375416,
+        "lng": -71.124265
+    },
+    {
+        "root": "02114",
+        "id": "709",
+        "name": "Taubman Building",
+        "lat": 42.371827,
+        "lng": -71.122037
+    },
+    {
+        "root": "04930",
+        "id": "549",
+        "name": "Hilles Library",
+        "lat": 42.380878,
+        "lng": -71.125077
+    },
+    {
+        "root": "03225",
+        "id": "510C",
+        "name": "Briggs Hall, Cabot House",
+        "lat": 42.38129,
+        "lng": -71.124821
+    },
+    {
+        "root": "03223",
+        "id": "510A",
+        "name": "Barnard Hall, Cabot House",
+        "lat": 42.381007,
+        "lng": -71.124556
+    },
+    {
+        "root": "05022",
+        "id": "263",
+        "name": "Burden Hall",
+        "lat": 42.365482,
+        "lng": -71.121045
+    },
+    {
+        "root": "06116",
+        "id": "870C",
+        "name": "Soldiers Field Park 3",
+        "lat": 42.365422,
+        "lng": -71.119059
+    },
+    {
+        "root": "06114",
+        "id": "871",
+        "name": "Soldiers Field Park Garage",
+        "lat": 42.364644,
+        "lng": -71.119965
+    },
+    {
+        "root": "05020",
+        "id": "243",
+        "name": "Dean's House",
+        "lat": 42.366283,
+        "lng": -71.121005
+    },
+    {
+        "root": "05040",
+        "id": "240",
+        "name": "Aldrich Hall",
+        "lat": 42.365876,
+        "lng": -71.12212
+    },
+    {
+        "root": "05062",
+        "id": "255",
+        "name": "McCulloch Hall",
+        "lat": 42.366876,
+        "lng": -71.121066
+    },
+    {
+        "root": "05064",
+        "id": "250",
+        "name": "Chase Hall",
+        "lat": 42.36689,
+        "lng": -71.121921
+    },
+    {
+        "root": "05065",
+        "id": "256",
+        "name": "Mellon Hall",
+        "lat": 42.367433,
+        "lng": -71.121548
+    },
+    {
+        "root": "05067",
+        "id": "237",
+        "name": "Mcarthur Hall",
+        "lat": 42.367218,
+        "lng": -71.119743
+    },
+    {
+        "root": "05066",
+        "id": "265",
+        "name": "Baker Hall",
+        "lat": 42.367214,
+        "lng": -71.120412
+    },
+    {
+        "root": "06071",
+        "id": "386",
+        "name": "132 Mount Auburn Street",
+        "lat": 42.373429,
+        "lng": -71.124186
+    },
+    {
+        "root": "06072",
+        "id": "387",
+        "name": "French Consulate",
+        "lat": 42.37357,
+        "lng": -71.124127
+    },
+    {
+        "root": "06073",
+        "id": "388",
+        "name": "140-142 Mount Auburn Street",
+        "lat": 42.373794,
+        "lng": -71.124619
+    },
+    {
+        "root": "03363",
+        "id": "951",
+        "name": "Massachusetts Hall",
+        "lat": 42.374439,
+        "lng": -71.118256
+    },
+    {
+        "root": "04195",
+        "id": "665E",
+        "name": "Observatory Bldg E",
+        "lat": 42.38185,
+        "lng": -71.128884
+    },
+    {
+        "root": "06125",
+        "id": "06125",
+        "name": "Botanic Gardens Bldg F",
+        "lat": 42.382334,
+        "lng": -71.126697
+    },
+    {
+        "root": "06124",
+        "id": "06124",
+        "name": "Botanic Gardens Bldg E",
+        "lat": 42.382654,
+        "lng": -71.126581
+    },
+    {
+        "root": "04425",
+        "id": "336",
+        "name": "Sever Hall",
+        "lat": 42.374344,
+        "lng": -71.115471
+    },
+    {
+        "root": "04240",
+        "id": "338",
+        "name": "Geological Museum",
+        "lat": 42.378146,
+        "lng": -71.115455
+    },
+    {
+        "root": "06137",
+        "id": "201",
+        "name": "3 Athens Terrace",
+        "lat": 42.369886,
+        "lng": -71.115209
+    },
+    {
+        "root": "06117",
+        "id": "870D",
+        "name": "Soldiers Field Park 4",
+        "lat": 42.365803,
+        "lng": -71.118745
+    },
+    {
+        "root": "05061",
+        "id": "254",
+        "name": "Hamilton Hall",
+        "lat": 42.367765,
+        "lng": -71.123231
+    },
+    {
+        "root": "06093",
+        "id": "223I",
+        "name": "Holden Green Bldg I",
+        "lat": 42.378852,
+        "lng": -71.107527
+    },
+    {
+        "root": "06094",
+        "id": "223J",
+        "name": "Holden Green Bldg J",
+        "lat": 42.378569,
+        "lng": -71.107265
+    },
+    {
+        "root": "06086",
+        "id": "223B",
+        "name": "Holden Green Bldg B",
+        "lat": 42.37846,
+        "lng": -71.1082
+    },
+    {
+        "root": "06088",
+        "id": "223D",
+        "name": "Holden Green Bldg D",
+        "lat": 42.378487,
+        "lng": -71.108056
+    },
+    {
+        "root": "02245",
+        "id": "02245",
+        "name": "40 Kirkland Street",
+        "lat": 42.376804,
+        "lng": -71.112162
+    },
+    {
+        "root": "02246",
+        "id": "02246",
+        "name": "42 Kirkland Street",
+        "lat": 42.376917,
+        "lng": -71.111862
+    },
+    {
+        "root": "02244",
+        "id": "02244",
+        "name": "20 Sumner Road",
+        "lat": 42.376563,
+        "lng": -71.112226
+    },
+    {
+        "root": "06066",
+        "id": "175A",
+        "name": "Harvard Square Hotel Garage",
+        "lat": 42.372626,
+        "lng": -71.122045
+    },
+    {
+        "root": "03920",
+        "id": "03920",
+        "name": "Beren Tennis Pavilion",
+        "lat": 42.369215,
+        "lng": -71.128166
+    },
+    {
+        "root": "05600",
+        "id": "05600",
+        "name": "20 Overland Street",
+        "lat": 42.346455,
+        "lng": -71.100006
+    },
+    {
+        "root": "06074",
+        "id": "06074",
+        "name": "Batten Hall",
+        "lat": 42.363945,
+        "lng": -71.124266
+    },
+    {
+        "root": "07730",
+        "id": "07730",
+        "name": "Health and Life Science Center ",
+        "lat": 42.362369,
+        "lng": -71.126445
+    },
+    {
+        "root": "04420",
+        "id": "357",
+        "name": "Science Center",
+        "lat": 42.37629,
+        "lng": -71.116614
+    },
+    {
+        "root": "06065",
+        "id": "175",
+        "name": "Harvard Square Hotel",
+        "lat": 42.372753,
+        "lng": -71.121991
+    },
+    {
+        "root": "02111",
+        "id": "706",
+        "name": "Littauer Center",
+        "lat": 42.371047,
+        "lng": -71.122092
+    },
+    {
+        "root": "03271",
+        "id": "930A",
+        "name": "Bryan Hall, Kirkland House",
+        "lat": 42.371285,
+        "lng": -71.120345
+    },
+    {
+        "root": "03291",
+        "id": "947",
+        "name": "Lowell House",
+        "lat": 42.370804,
+        "lng": -71.118343
+    },
+    {
+        "root": "03315",
+        "id": "969B",
+        "name": "Quincy House New Residence Hall",
+        "lat": 42.370676,
+        "lng": -71.116672
+    },
+    {
+        "root": "06278",
+        "id": "06278",
+        "name": "Peabody Terrace Bldg F",
+        "lat": 42.365912,
+        "lng": -71.11551
+    },
+    {
+        "root": "06249",
+        "id": "06249",
+        "name": "84 Seattle Street",
+        "lat": 42.361206,
+        "lng": -71.126253
+    },
+    {
+        "root": "06273",
+        "id": "06273",
+        "name": "415 Western Avenue",
+        "lat": 42.362739,
+        "lng": -71.140369
+    },
+    {
+        "root": "03321",
+        "id": "957A",
+        "name": "Wigglesworth Hall A",
+        "lat": 42.373279,
+        "lng": -71.117901
+    },
+    {
+        "root": "06171",
+        "id": "450",
+        "name": "11 Sumner Road",
+        "lat": 42.376107,
+        "lng": -71.112897
+    },
+    {
+        "root": "04760",
+        "id": "636",
+        "name": "Museum of Comparative Zoology Laboratories",
+        "lat": 42.379214,
+        "lng": -71.115185
+    },
+    {
+        "root": "03761",
+        "id": "438",
+        "name": "Engineering Science Laboratory",
+        "lat": 42.37999,
+        "lng": -71.116081
+    },
+    {
+        "root": "02573",
+        "id": "563",
+        "name": "Shaw Hall",
+        "lat": 42.379752,
+        "lng": -71.118421
+    },
+    {
+        "root": "06269",
+        "id": "06269",
+        "name": "11 Kirkland Place",
+        "lat": 42.378028,
+        "lng": -71.113538
+    },
+    {
+        "root": "02575",
+        "id": "565",
+        "name": "Dane Hall",
+        "lat": 42.379706,
+        "lng": -71.117398
+    },
+    {
+        "root": "04780",
+        "id": "695",
+        "name": "Peabody Museum",
+        "lat": 42.378233,
+        "lng": -71.1148
+    },
+    {
+        "root": "04134",
+        "id": "309",
+        "name": "Mallinckrodt-Hoffman Link",
+        "lat": 42.377788,
+        "lng": -71.115826
+    },
+    {
+        "root": "04133",
+        "id": "313C",
+        "name": "Mallinckrodt Chemistry Lab",
+        "lat": 42.377277,
+        "lng": -71.115615
+    },
+    {
+        "root": "04135",
+        "id": "195",
+        "name": "Naito",
+        "lat": 42.377589,
+        "lng": -71.115238
+    },
+    {
+        "root": "04480",
+        "id": "04480",
+        "name": "Bauer Life Sciences Building",
+        "lat": 42.377729,
+        "lng": -71.114872
+    },
+    {
+        "root": "04435",
+        "id": "310",
+        "name": "Sherman Fairchild Biochemistry",
+        "lat": 42.377508,
+        "lng": -71.114614
+    },
+    {
+        "root": "04131",
+        "id": "313B",
+        "name": "Conant Chemistry Lab",
+        "lat": 42.377127,
+        "lng": -71.115212
+    },
+    {
+        "root": "06286",
+        "id": "06286",
+        "name": "7 Grant Street",
+        "lat": 42.369835,
+        "lng": -71.115103
+    },
+    {
+        "root": "05585",
+        "id": "05585",
+        "name": "New Research Building",
+        "lat": 42.33851,
+        "lng": -71.103073
+    },
+    {
+        "root": "05535",
+        "id": "603",
+        "name": "Hms Building C",
+        "lat": 42.336195,
+        "lng": -71.10447
+    },
+    {
+        "root": "05551",
+        "id": "685",
+        "name": "Warren Alpert Building",
+        "lat": 42.33622,
+        "lng": -71.102863
+    },
+    {
+        "root": "05541",
+        "id": "615",
+        "name": "Countway Library",
+        "lat": 42.33509,
+        "lng": -71.1037
+    },
+    {
+        "root": "02790",
+        "id": "729",
+        "name": "Kresge Building (SPH3)",
+        "lat": 42.335329,
+        "lng": -71.102918
+    },
+    {
+        "root": "05593",
+        "id": "05593",
+        "name": "158 Longwood Ave",
+        "lat": 42.335866,
+        "lng": -71.100655
+    },
+    {
+        "root": "06009",
+        "id": "363",
+        "name": "President's House",
+        "lat": 42.375433,
+        "lng": -71.138405
+    },
+    {
+        "root": "04193",
+        "id": "665C",
+        "name": "Observatory Bldg C",
+        "lat": 42.381695,
+        "lng": -71.128245
+    },
+    {
+        "root": "04192",
+        "id": "667",
+        "name": "Observatory Bldg B",
+        "lat": 42.381422,
+        "lng": -71.128046
+    },
+    {
+        "root": "04197",
+        "id": "670",
+        "name": "Perkin Laboratory",
+        "lat": 42.381217,
+        "lng": -71.12777
+    },
+    {
+        "root": "06111",
+        "id": "425E",
+        "name": "Peabody Terrace Bldg D",
+        "lat": 42.366797,
+        "lng": -71.11538
+    },
+    {
+        "root": "01701",
+        "id": "01701",
+        "name": "Blackstone Steam Plant",
+        "lat": 42.364037,
+        "lng": -71.115627
+    },
+    {
+        "root": "06109",
+        "id": "425C",
+        "name": "Peabody Terrace Bldg B",
+        "lat": 42.367063,
+        "lng": -71.114226
+    },
+    {
+        "root": "03252",
+        "id": "920A",
+        "name": "Dunster House Master's Residence",
+        "lat": 42.368012,
+        "lng": -71.116116
+    },
+    {
+        "root": "03099",
+        "id": "540",
+        "name": "Agassiz House",
+        "lat": 42.376071,
+        "lng": -71.123257
+    },
+    {
+        "root": "03032",
+        "id": "552",
+        "name": "Schlesinger Library",
+        "lat": 42.375751,
+        "lng": -71.123132
+    },
+    {
+        "root": "01201",
+        "id": "986",
+        "name": "65 Rear Mount Auburn Tele Building",
+        "lat": 42.372203,
+        "lng": -71.118018
+    },
+    {
+        "root": "03215",
+        "id": "910E",
+        "name": "Westmorely Court, Adams House",
+        "lat": 42.3717,
+        "lng": -71.116177
+    },
+    {
+        "root": "03214",
+        "id": "910D",
+        "name": "Russell Hall, Adams House",
+        "lat": 42.371795,
+        "lng": -71.116632
+    },
+    {
+        "root": "06185",
+        "id": "834",
+        "name": "9-13A Ware Street",
+        "lat": 42.372729,
+        "lng": -71.113297
+    },
+    {
+        "root": "04110",
+        "id": "958A",
+        "name": "8 Prescott Street Garage",
+        "lat": 42.372486,
+        "lng": -71.113627
+    },
+    {
+        "root": "05532",
+        "id": "600",
+        "name": "Vanderbilt Hall",
+        "lat": 42.337651,
+        "lng": -71.103681
+    },
+    {
+        "root": "06193",
+        "id": "115A",
+        "name": "Doebele House Addition",
+        "lat": 42.372359,
+        "lng": -71.11108
+    },
+    {
+        "root": "06043",
+        "id": "100",
+        "name": "Smith Campus Center",
+        "lat": 42.372678,
+        "lng": -71.118712
+    },
+    {
+        "root": "06061",
+        "id": "274",
+        "name": "Smith Campus Center, Garage",
+        "lat": 42.372683,
+        "lng": -71.118439
+    },
+    {
+        "root": "01130",
+        "id": "973",
+        "name": "Smith Center Health Services",
+        "lat": 42.37221,
+        "lng": -71.118797
+    },
+    {
+        "root": "06312",
+        "id": "06312",
+        "name": "Charlesview Apartments Bldg J",
+        "lat": 42.364198,
+        "lng": -71.127981
+    },
+    {
+        "root": "06314",
+        "id": "06314",
+        "name": "Charlesview Apartments Bldg H",
+        "lat": 42.364303,
+        "lng": -71.127461
+    },
+    {
+        "root": "06310",
+        "id": "06310",
+        "name": "Charlesview Apartments Bldgs B & C",
+        "lat": 42.363708,
+        "lng": -71.127613
+    },
+    {
+        "root": "06308",
+        "id": "06308",
+        "name": "Charlesview Apartments Bldg G ",
+        "lat": 42.364164,
+        "lng": -71.126424
+    },
+    {
+        "root": "06313",
+        "id": "06313",
+        "name": "Charlesview Apartments Bldg I",
+        "lat": 42.36405,
+        "lng": -71.127672
+    },
+    {
+        "root": "06307",
+        "id": "06307",
+        "name": "Charlesview Apartments Bldgs E & F ",
+        "lat": 42.364355,
+        "lng": -71.126989
+    },
+    {
+        "root": "06311",
+        "id": "06311",
+        "name": "Charlesview Apartments Bldg D",
+        "lat": 42.363754,
+        "lng": -71.128514
+    },
+    {
+        "root": "06309",
+        "id": "06309",
+        "name": "Charlesview Apartments Bldg A ",
+        "lat": 42.363811,
+        "lng": -71.126542
+    },
+    {
+        "root": "02810",
+        "id": "N2810",
+        "name": "Wigglesworth Building",
+        "lat": 42.334773,
+        "lng": -71.102473
+    },
+    {
+        "root": "02750",
+        "id": "727B",
+        "name": "SPH2",
+        "lat": 42.335628,
+        "lng": -71.102051
+    },
+    {
+        "root": "02740",
+        "id": "727A",
+        "name": "SPH1",
+        "lat": 42.335452,
+        "lng": -71.102492
+    },
+    {
+        "root": "02720",
+        "id": "724",
+        "name": "Bagnoud Building, F. X.",
+        "lat": 42.335537,
+        "lng": -71.101733
+    },
+    {
+        "root": "01205",
+        "id": "01205",
+        "name": "Murray Street 144",
+        "lat": 42.430946,
+        "lng": -71.088226
+    },
+    {
+        "root": "06316",
+        "id": "06316",
+        "name": "360 Western Avenue",
+        "lat": 42.362766,
+        "lng": -71.136841
+    },
+    {
+        "root": "00110",
+        "id": "00110",
+        "name": "Sommerville Site",
+        "lat": 42.378104,
+        "lng": -71.084565
+    },
+    {
+        "root": "00091",
+        "id": "455",
+        "name": "32 Quincy Street",
+        "lat": 42.374143,
+        "lng": -71.114226
+    },
+    {
+        "root": "02122",
+        "id": "N2122",
+        "name": "50 Church Street",
+        "lat": 42.373831,
+        "lng": -71.120379
+    },
+    {
+        "root": "03764",
+        "id": "435",
+        "name": "Pierce Hall",
+        "lat": 42.378178,
+        "lng": -71.117165
+    },
+    {
+        "root": "03760",
+        "id": "316",
+        "name": "Cruft Laboratory",
+        "lat": 42.377704,
+        "lng": -71.116904
+    },
+    {
+        "root": "02518",
+        "id": "571",
+        "name": "Griswold Hall",
+        "lat": 42.377569,
+        "lng": -71.118884
+    },
+    {
+        "root": "05106",
+        "id": "05106",
+        "name": "Arsenal Building #39",
+        "lat": 42.363153,
+        "lng": -71.168378
+    },
+    {
+        "root": "07252",
+        "id": "null",
+        "name": "Chao Center",
+        "lat": 42.366517,
+        "lng": -71.120017
+    },
+    {
+        "root": "05121",
+        "id": "05121",
+        "name": "Crimson Commons",
+        "lat": 42.365895,
+        "lng": -71.120952
+    },
+    {
+        "root": "04934",
+        "id": "696",
+        "name": "Tozzer Anthropology Building",
+        "lat": 42.378504,
+        "lng": -71.114794
+    },
+    {
+        "root": "36 Oxford St",
+        "id": "784",
+        "name": "Conant Hall",
+        "lat": 42.379426,
+        "lng": -71.116255
+    },
+    {
+        "root": "44R BRATTLE ST",
+        "id": "N2408",
+        "name": "44 Rear Brattle Street",
+        "lat": 42.373511,
+        "lng": -71.122324
+    },
+    {
+        "root": "26 Arboretum Road",
+        "id": "00028\r\n",
+        "name": "26 Arboretum Road",
+        "lat": 42.29503,
+        "lng": -71.120491
+    },
+    {
+        "root": "26 Oxford St",
+        "id": "X635",
+        "name": "Museum of Comparative Zoology Laboratories",
+        "lat": 42.379214,
+        "lng": -71.115185
+    }
+]
