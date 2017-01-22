@@ -192,11 +192,11 @@ app.get('/db', function (req, res) {
 
 app.get('/drop', function (req, res) {
 
-if (!(req.password === "matthewschrage")) {
-  res.send("You don't have permission");
-
-  return;
-}
+// if (!(req.password === "matthewschrage")) {
+//   res.send("You don't have permission");
+//
+//   return;
+// }
 
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     client.query('TRUNCATE '+req.query.name, function(err, result) {
