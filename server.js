@@ -56,7 +56,9 @@ function hexToRgb(hex) {
 function searchBuildings(name) {
 
 
-    for (var building in buildings) {
+    for (var i = 0; i < buildings.length; i++) {
+
+      var building = buildings[i];
       if (building.name && building.name.substring(0, name.length).toLowerCase() === name.toLowerCase()) {
         console.log(building);
         return {"lat": building.lat,"lon":building.lng};
