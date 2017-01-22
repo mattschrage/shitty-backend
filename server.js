@@ -11,6 +11,33 @@ var pg = require('pg');
 
 //app.use(bodyParser.json())
 //query for get; body for post
+
+app.post('/loc', function(req, res) {
+
+  var locations = req.body.locations,
+      userId = req.body.userId;
+
+  for (var i = 0; i < locations.length; i++){
+    var data = locations[i];
+    var lat = data.lat,
+        lon = data.lon,
+        location = lat + "," lon,
+        timestamp = data.timestamp;
+
+        pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+          client.query('INSERT INTO locations(location, timestamp, userId) values($1, $2, $3)',[location, timestamp, userId], function(err, result) {
+            done();
+            if (err)
+             { console.error(err); res.send("Error " + err); }
+            else
+             {     res.send('Inserted location into DB'); }
+          });
+        });
+  }
+
+
+
+});
 app.post('/event', function(req, res) {
     var name = req.body.name,
         icon = req.body.icon,
@@ -24,7 +51,10 @@ app.post('/event', function(req, res) {
         location = req.body.location,
         color = req.body.color;
 
+
     //do some post processing ei. match up Location Name with actual geopoint
+
+    //
 
     // set color depending on icon
     switch (icon) {
@@ -65,7 +95,7 @@ app.post('/event', function(req, res) {
 
 app.get('/init', function(req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('CREATE TABLE events ( id SERIAL PRIMARY KEY,icon TEXT, name TEXT, details TEXT, hostName TEXT,locationName TEXT,color TEXT,startDate timestamptz, endDate timestamptz,location POINT)', function(err, result) {
+    client.query('CREATE TABLE locations ( id SERIAL PRIMARY KEY, startDate timestamptz, location POINT, userId TEXT)', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
