@@ -76,6 +76,11 @@ app.get('/init', function(req, res) {
 
 });
 
+app.get('/hits', function(req, res) {
+  res.send({"count":"1234"});
+}
+
+
 app.get('/feed', function(req, res) {
   console.log("FEED");
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
@@ -123,7 +128,7 @@ app.get('/feed', function(req, res) {
 
 app.get('/db', function (req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM events WHERE startDate <= now()', function(err, result) {
+    client.query('SELECT * FROM events', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
