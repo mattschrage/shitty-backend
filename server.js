@@ -78,7 +78,7 @@ app.get('/init', function(req, res) {
 
 app.get('/hits', function(req, res) {
   res.send({"count":"1234"});
-}
+});
 
 
 app.get('/feed', function(req, res) {
