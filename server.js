@@ -25,7 +25,7 @@ app.post('/loc', function(req, res) {
         timestamp = data.timestamp;
 
         pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-          client.query('INSERT INTO locations(location, timestamp, userId) values($1, $2, $3)',[location, timestamp, userId], function(err, result) {
+          client.query('INSERT INTO locations(location, startDate, userId) values($1, $2, $3)',[location, timestamp, userId], function(err, result) {
             done();
             if (err)
              { console.error(err); res.send("Error " + err); }
