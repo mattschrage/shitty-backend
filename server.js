@@ -61,7 +61,7 @@ function searchBuildings(name) {
       var building = buildings[i];
       if (building.name && building.name.substring(0, name.length).toLowerCase() === name.toLowerCase()) {
         console.log(building);
-        return {"lat": building.lat,"lon":building.lng};
+        return ""+ building.lat+" , " + building.lng};
       }
     }
 
