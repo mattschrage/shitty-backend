@@ -77,7 +77,8 @@ app.post('/event', function(req, res) {
         location = req.body.location;
         //convert hex to rgb
         var rgb = hexToRgb(req.body.color);
-        var color  = "" + rgb.r / 100 + " " + rgb.g / 100 + " " rgb.a / 100 + " " + 1.0;
+        console.log(rgb);
+        var color  = "" + rgb.r / 100 + " " + rgb.g / 100 + " " rgb.b / 100 + " " + 1.0;
 
     //do some post processing ei. match up Location Name with actual geopoint
       location = searchBuildings(locationBuilding);
