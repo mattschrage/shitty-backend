@@ -6,11 +6,15 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+var buildings = require('./buildings.json');
+
 var pg = require('pg');
 //var bodyParser = require('body-parser')
 
 //app.use(bodyParser.json())
 //query for get; body for post
+
+
 
 app.post('/loc', function(req, res) {
 
@@ -38,6 +42,28 @@ app.post('/loc', function(req, res) {
 
 
 });
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+
+function searchBuildings(name) {
+
+    for (var building in buildings) {
+      if (building.name.startsWith(name)) {
+        return {"lat": building.lat,"lon":building.lng};
+      }
+    }
+
+    console.log("NO BUILDING FOUND FOR \""+name+"\"");
+}
+
 app.post('/event', function(req, res) {
     var name = req.body.name,
         icon = req.body.icon,
@@ -48,37 +74,26 @@ app.post('/event', function(req, res) {
         locationBuilding = req.body.locationBuilding,
         locationRoom = req.body.locationRoom,
         locationName = locationBuilding + " " + locationRoom;
-        location = req.body.location,
-        color = req.body.color;
-
+        location = req.body.location;
+        //convert hex to rgb
+        var rgb = hexToRgb(req.body.color);
+        var color  = "" + rgb.r / 100 + " " + rgb.g / 100 + " " rgb.a / 100 + " " + 1.0;
 
     //do some post processing ei. match up Location Name with actual geopoint
+      location = searchBuildings(locationBuilding);
 
-    //
-
-    // set color depending on icon
-    switch (icon) {
-      case "❤️":
-        color = ""
-        break;
-      case "❤️":
-
-        break;
-      default:
-
-    }
 
     //set geopoint depending on location
-    switch (locationBuilding) {
-      case "❤️":
-        color = ""
-        break;
-      case "❤️":
-
-        break;
-      default:
-
-    }
+    // switch (locationBuilding) {
+    //   case "Thayer":
+    //     location = ""
+    //     break;
+    //   case "Straus":
+    //     location = ""
+    //     break;
+    //   default:
+    //
+    // }
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
