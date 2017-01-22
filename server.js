@@ -21,7 +21,7 @@ app.post('/loc', function(req, res) {
     var data = locations[i];
     var lat = data.lat,
         lon = data.lon,
-        location = lat + "," lon,
+        location = lat + "," + lon,
         timestamp = data.timestamp;
 
         pg.connect(process.env.DATABASE_URL, function(err, client, done) {
