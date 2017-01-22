@@ -54,14 +54,20 @@ function hexToRgb(hex) {
 
 
 function searchBuildings(name) {
+  console.log(buildings[0]);
+
 
     for (var building in buildings) {
-      if (building.name.startsWith(name)) {
+      console.log(building);
+      if (building.name && building.name.startsWith(name)) {
         return {"lat": building.lat,"lon":building.lng};
       }
     }
 
     console.log("NO BUILDING FOUND FOR \""+name+"\"");
+
+    console.log(buildings);
+
 }
 
 app.post('/event', function(req, res) {
