@@ -89,7 +89,8 @@ app.get('/feed', function(req, res) {
 
        //iterate to seperate into different sections
        var todayDate = new Date();
-       var tomorrowThreshold = new Date(todayDate.getDate() + 1)
+       var tomorrowThreshold = new Date();
+       tomorrowThreshold.setDate(todayDate.getDate() + 1);
        var todayThreshold = tomorrowThreshold;
        todayThreshold.setHours(4,0,0,0);
        tomorrowThreshold.setHours(24,0,0,0);
@@ -100,7 +101,6 @@ app.get('/feed', function(req, res) {
        for (var i = 0; i < result["rows"].length; i++ ) {
          var row = result["rows"][i];
          var date = row["startdate"];
-         console.log("StartDate:"+row["startdate"]+", Stringify:"+JSON.stringify(row["startdate"])+", date:"+date);
 
          var timestamp = date.getTime();
          console.log("Timestamp:"+timestamp+", Today Threshold:"+todayThreshold.getTime());
