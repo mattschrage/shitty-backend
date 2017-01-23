@@ -15,6 +15,8 @@ function getSqlConnection() {
     var close;
     return pg.connectAsync( process.env.DATABASE_URL || database_url).then(function(client, done) {
         close = done;
+        console.log("done:"+done);
+
         return client;
     }).disposer(function() {
         if (close) close();
@@ -152,7 +154,8 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  Promise.using(getSqlConnection(process.env.DATABASE_URL || database_url), function(client) {
+  Promise.using(getSqlConnection(), function(client) {
+    console.log(client);
     return client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');');
 
   }).then(function(result) {
