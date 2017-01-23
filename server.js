@@ -156,9 +156,10 @@ app.get('/feed', function(req, res) {
     return client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');');
 
   }).then(function(result) {
+      console.log(result);
       // connection already disposed here
       var payload = {"sectionTitles":["Today"],"sections":[result._result.rows]}
-        res.send(payload);
+      res.send(payload);
   });
   // pg.connectAsync(database_url || process.env.DATABASE_URL)
   //   .then(function(client, done) {
