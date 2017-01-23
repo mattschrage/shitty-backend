@@ -156,7 +156,8 @@ app.get('/feed', function(req, res) {
   console.log("FEED");
   Promise.using(getSqlConnection(), function(client) {
     console.log(client);
-    return client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');');
+    //WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');
+    return client.query('SELECT * FROM events;');
 
   }).then(function(result) {
       console.log(result);
