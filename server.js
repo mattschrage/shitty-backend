@@ -15,7 +15,7 @@ function getSqlConnection() {
     var close;
     return pg.connectAsync( process.env.DATABASE_URL || database_url).then(function(client, done) {
         close = done;
-        console.log("done:"+done);
+        console.log("Whats up my dude");
 
         return client;
     }).disposer(function() {
