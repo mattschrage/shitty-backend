@@ -9,8 +9,10 @@
   "author": "Matt Schrage",
   "license": "ISC",
   "dependencies": {
-  "express": "^4.13.3",
-  "body-parser":"*",
-  "pg": "4.x"
+    "bluebird": "^3.4.7",
+    "body-parser": "*",
+    "express": "^4.13.3",
+    "pg": "4.x",
+    "pg-promise": "*"
   }
 }

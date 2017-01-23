@@ -7,8 +7,20 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 var buildings = require('./buildings.json');
+var Promise = require('bluebird');
+var pg = Promise.promisifyAll(require('pg'));
+var database_url = 'postgres://MattSchrage@localhost:5432/peekbackend';
 
-var pg = require('pg');
+function getSqlConnection() {
+    var close;
+    return pg.connectAsync(database_url).then(function(client, done) {
+        close = done;
+        return client;
+    }).disposer(function() {
+        if (close) close();
+    });
+}
+
 //var bodyParser = require('body-parser')
 
 //app.use(bodyParser.json())
@@ -28,7 +40,8 @@ app.post('/loc', function(req, res) {
         location = lat + "," + lon,
         timestamp = data.timestamp;
 
-        pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+        pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+
           client.query('INSERT INTO locations(location, startDate, userId) values($1, $2, $3)',[location, timestamp, userId], function(err, result) {
             done();
             if (err)
@@ -85,8 +98,12 @@ app.post('/event', function(req, res) {
         console.log(rgb);
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
 
+
+        startDate.setTime( startDate.getTime() + 5*60*1000 );
+
     //do some post processing ei. match up Location Name with actual geopoint
       location = searchBuildings(locationBuilding);
+
 
 
     //set geopoint depending on location
@@ -102,7 +119,7 @@ app.post('/event', function(req, res) {
     // }
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
-    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    pg.connect(database_url || database_url || database_url || process.env.DATABASE_URL, function(err, client, done) {
       client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
         done();
         if (err)
@@ -115,7 +132,8 @@ app.post('/event', function(req, res) {
 });
 
 app.get('/init', function(req, res) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+
+  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
     client.query('CREATE TABLE locations ( id SERIAL PRIMARY KEY, startDate timestamptz, location POINT, userId TEXT)', function(err, result) {
       done();
       if (err)
@@ -134,52 +152,67 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-//AND startDate <= (now() + interval \'7 days\')
-//WHERE startDate >= (now() - interval \'3 hours\')
-    client.query('SELECT * FROM events;', function(err, result) {
-      done();
-      if (err)
-       { console.error(err); res.send("Error " + err); }
-      else
-       { console.log(result["rows"]);
+  Promise.using(getSqlConnection(database_url || process.env.DATABASE_URL), function(client) {
+    return client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');');
 
-       //iterate to seperate into different sections
-       var todayDate = new Date();
-       var tomorrowThreshold = new Date();
-       tomorrowThreshold.setDate(todayDate.getDate() + 1);
-       var todayThreshold = tomorrowThreshold;
-       todayThreshold.setHours(4,0,0,0);
-       tomorrowThreshold.setHours(24,0,0,0);
-
-       var today = [];
-       var tomorrow = [];
-       var upcoming = [];
-       for (var i = 0; i < result["rows"].length; i++ ) {
-         var row = result["rows"][i];
-         var date = row["startdate"];
-
-         var timestamp = date.getTime();
-         console.log("Timestamp:"+timestamp+", Today Threshold:"+todayThreshold.getTime());
-         if (timestamp <= todayThreshold.getTime()) {
-            today.push(row);
-         } else if (timestamp <= tomorrowThreshold.getTime()) {
-            tomorrow.push(row);
-         } else {
-            upcoming.push(row);
-         }
-
-       }
-
-       var payload = {"sectionTitles":["Today","Tomorrow","This Week"],"sections":[today, tomorrow, upcoming]}
-         res.send(payload);
-       }
-    });
+  }).then(function(result) {
+      // connection already disposed here
+      var payload = {"sectionTitles":["Today"],"sections":[result._result.rows]}
+        res.send(payload);
   });
+  // pg.connectAsync(database_url || process.env.DATABASE_URL)
+  //   .then(function(client, done) {
+  //
+  //   client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');', function(err, result) {
+  //
+  //     done();
+  //
+  //     if (err) {
+  //        console.error(err);
+  //       res.send("Error " + err);
+  //     }
+  //
+  //     else {
+  //       console.log(result["rows"]);
+  //
+  //      //iterate to seperate into different sections
+  //      var todayDate = new Date();
+  //      var tomorrowThreshold = new Date();
+  //      tomorrowThreshold.setDate(todayDate.getDate() + 1);
+  //      var todayThreshold = tomorrowThreshold;
+  //      todayThreshold.setHours(4,0,0,0);
+  //      tomorrowThreshold.setHours(24,0,0,0);
+  //
+  //      var today = [];
+  //      var tomorrow = [];
+  //      var upcoming = [];
+  //      for (var i = 0; i < result["rows"].length; i++ ) {
+  //        var row = result["rows"][i];
+  //        var date = row["startdate"];
+  //
+  //        var timestamp = date.getTime();
+  //        console.log("Timestamp:"+timestamp+", Today Threshold:"+todayThreshold.getTime());
+  //        if (timestamp <= todayThreshold.getTime()) {
+  //           today.push(row);
+  //        } else if (timestamp <= tomorrowThreshold.getTime()) {
+  //           tomorrow.push(row);
+  //        } else {
+  //           upcoming.push(row);
+  //        }
+  //
+  //      }
+  //
+  //      var payload = {"sectionTitles":["Today","Tomorrow","This Week"],"sections":[today, tomorrow, upcoming]}
+  //        res.send(payload);
+  //      }
+  //   });
+  //});
 });
 
 app.get('/db', function (req, res) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+
+  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+
     client.query('SELECT * FROM '+req.query.name, function(err, result) {
       done();
       if (err)
@@ -199,7 +232,9 @@ app.get('/drop', function (req, res) {
 //   return;
 // }
 
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+
+  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+
     client.query('TRUNCATE '+req.query.name, function(err, result) {
       done();
       if (err)
@@ -213,13 +248,10 @@ app.get('/drop', function (req, res) {
 
 app.get('/delete', function (req, res) {
 
-// if (!(req.password === "matthewschrage")) {
-//   res.send("You don't have permission");
-//
-//   return;
-// }
 
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+
+  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+
     client.query('DELETE FROM '+req.query.name+' WHERE id = '+req.query.id, function(err, result) {
       done();
       if (err)
@@ -231,4 +263,4 @@ app.get('/delete', function (req, res) {
   });
 });
 
-app.listen(process.env.PORT || 4730);
+app.listen(8000 || process.env.PORT || 8000);
