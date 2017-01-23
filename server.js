@@ -147,18 +147,20 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
+  var today = db.any('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\')');
+  var tomorrow = db.any('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\')');
+  var upcoming = db.any('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\')');
+  Promise.all([today,tomorrow,upcoming])
+  .then(function(sections){
+    console.log(sections);
+    // connection already disposed here
+    var payload = {"sectionTitles":["Today"],"sections":[sections]}
+    res.send(payload);
+  })
+  .catch(function(err){
+    console.log("err",err);
+  });
 
-  db.any("SELECT * FROM events;")
-      .then(function (data) {
-        console.log(data);
-        // connection already disposed here
-        var payload = {"sectionTitles":["Today"],"sections":[data]}
-        res.send(payload);
-      })
-      .catch(function (error) {
-          // error;
-          console.log(error);
-      });
 
   // pg.connectAsync(database_url || process.env.DATABASE_URL)
   //   .then(function(client, done) {
