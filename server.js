@@ -7,21 +7,14 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 var buildings = require('./buildings.json');
-var Promise = require('bluebird');
-var pg = Promise.promisifyAll(require('pg'));
-var database_url = 'postgres://MattSchrage@localhost:5432/peekbackend';
 
-function getSqlConnection() {
-    var close;
-    return pg.connectAsync( process.env.DATABASE_URL || database_url).then(function(client, done) {
-        close = done;
-        console.log("Whats up my dude");
+var pg = require('pg');
+var pgp = require('pg-promise')();
+var database_url = process.env.DATABASE_URL || 'postgres://MattSchrage@localhost:5432/peekbackend';
 
-        return client;
-    }).disposer(function() {
-        if (close) close();
-    });
-}
+var db = pgp(database_url);
+
+
 
 //var bodyParser = require('body-parser')
 
@@ -154,17 +147,19 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  Promise.using(getSqlConnection(), function(client) {
-    console.log(client);
-    //WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');
-    return client.query('SELECT * FROM events;');
 
-  }).then(function(result) {
-      console.log(result);
-      // connection already disposed here
-      var payload = {"sectionTitles":["Today"],"sections":[result._result.rows]}
-      res.send(payload);
-  });
+  db.any("SELECT * FROM events;")
+      .then(function (data) {
+        console.log(data);
+        // connection already disposed here
+        var payload = {"sectionTitles":["Today"],"sections":[data]}
+        res.send(payload);
+      })
+      .catch(function (error) {
+          // error;
+          console.log(error);
+      });
+
   // pg.connectAsync(database_url || process.env.DATABASE_URL)
   //   .then(function(client, done) {
   //
