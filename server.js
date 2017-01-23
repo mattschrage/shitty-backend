@@ -13,7 +13,7 @@ var database_url = 'postgres://MattSchrage@localhost:5432/peekbackend';
 
 function getSqlConnection() {
     var close;
-    return pg.connectAsync(database_url).then(function(client, done) {
+    return pg.connectAsync( process.env.DATABASE_URL || database_url).then(function(client, done) {
         close = done;
         return client;
     }).disposer(function() {
@@ -119,7 +119,7 @@ app.post('/event', function(req, res) {
     // }
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
-    pg.connect(database_url || database_url || database_url || process.env.DATABASE_URL, function(err, client, done) {
+    pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
       client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
         done();
         if (err)
@@ -133,7 +133,7 @@ app.post('/event', function(req, res) {
 
 app.get('/init', function(req, res) {
 
-  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+  pg.connect(process.env.DATABASE_URL || database_url, function(err, client, done) {
     client.query('CREATE TABLE locations ( id SERIAL PRIMARY KEY, startDate timestamptz, location POINT, userId TEXT)', function(err, result) {
       done();
       if (err)
@@ -152,7 +152,7 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  Promise.using(getSqlConnection(database_url || process.env.DATABASE_URL), function(client) {
+  Promise.using(getSqlConnection(process.env.DATABASE_URL || database_url), function(client) {
     return client.query('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\');');
 
   }).then(function(result) {
@@ -211,7 +211,7 @@ app.get('/feed', function(req, res) {
 
 app.get('/db', function (req, res) {
 
-  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+  pg.connect( process.env.DATABASE_URL || database_url, function(err, client, done) {
 
     client.query('SELECT * FROM '+req.query.name, function(err, result) {
       done();
@@ -233,7 +233,7 @@ app.get('/drop', function (req, res) {
 // }
 
 
-  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+  pg.connect(process.env.DATABASE_URL || database_url, function(err, client, done) {
 
     client.query('TRUNCATE '+req.query.name, function(err, result) {
       done();
@@ -250,7 +250,7 @@ app.get('/delete', function (req, res) {
 
 
 
-  pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+  pg.connect(process.env.DATABASE_URL || database_url, function(err, client, done) {
 
     client.query('DELETE FROM '+req.query.name+' WHERE id = '+req.query.id, function(err, result) {
       done();
@@ -263,4 +263,4 @@ app.get('/delete', function (req, res) {
   });
 });
 
-app.listen(8000 || process.env.PORT || 8000);
+app.listen(process.env.PORT || 8000);
