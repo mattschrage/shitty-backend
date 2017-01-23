@@ -94,7 +94,7 @@ app.post('/event', function(req, res) {
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
 
 
-        startDate.setTime( startDate.getTime() + 5*60*1000 );
+        //startDate.setTime( startDate.getTime() + 5*60*1000 );
 
     //do some post processing ei. match up Location Name with actual geopoint
       location = searchBuildings(locationBuilding);
@@ -147,14 +147,14 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  var today = db.any('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\')');
+  var today = db.any('SELECT * FROM events WHERE startDate > TIMESTAMP \'today\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\'');
   var tomorrow = db.any('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\')');
   var upcoming = db.any('SELECT * FROM events WHERE startDate >= (now() - interval \'3 hours\') AND startDate <= (now() + interval \'7 days\')');
   Promise.all([today,tomorrow,upcoming])
   .then(function(sections){
     console.log(sections);
     // connection already disposed here
-    var payload = {"sectionTitles":["Today"],"sections":[sections]}
+    var payload = {"sectionTitles":["Today","Tomorrow","This Week"],"sections":[sections]}
     res.send(payload);
   })
   .catch(function(err){
