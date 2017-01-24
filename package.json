@@ -14,5 +14,10 @@
     "express": "^4.13.3",
     "pg": "4.x",
     "pg-promise": "*"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }
