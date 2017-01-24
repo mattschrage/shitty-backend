@@ -1,35 +1,40 @@
-let express = require('express');
-let bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 let pgp = require('pg-promise')();
-
-let buildings = require('./buildings.json');
-let config = require('./config');
+import Fuse from 'fuse';
+import buildings from './buildings.json';
+import config from './config';
 
 let db = pgp(config.dbUrl);
 let app = express();
+
+let fuse = new Fuse(buildings, {
+  caseSensitive: false,
+  keys: ['name']
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.post('/loc', function (req, res) {
+app.post('/loc', (req, res) => {
   let locations = req.body.locations;
   let userId = req.body.userId;
 
   for (let data of locations) {
     let {lat, lon, timestamp} = data;
-    let location = lat + ',' + lon;
+    let location = `${lat},${lon}`;
 
     let query = 'INSERT INTO locations(location, startDate, userId) values($1, $2, $3)';
 
     // TODO: Move out of loop and into bulk insert to speed up
     db.any(query, [location, timestamp, userId])
-      .then(function () {
+      .then(() => {
         res.send('Inserted location into DB');
-      }).catch(function (err) {
+      }).catch(err => {
         console.error(err);
-        res.send('Error ' + err);
+        res.send(`Error ${err}`);
       });
   }
 });
@@ -44,19 +49,18 @@ function hexToRgb (hex) {
 }
 
 function searchBuildings (name) {
-  for (let building of buildings) {
-    if (building.name && building.name.substring(0, name.length).toLowerCase() === name.toLowerCase()) {
-      console.log(building);
-      return `${building.lat} , ${building.lng}`;
-    }
+  let building = fuse.search(name)[0];
+  if (building) {
+    console.log(building);
+    return `${building.lat} , ${building.lng}`;
+  } else {
+    console.log(`NO BUILDING FOUND FOR "${name}"`);
   }
-
-  console.log('NO BUILDING FOUND FOR "' + name + '"');
 }
 
-app.post('/event', function (req, res) {
+app.post('/event', (req, res) => {
   let {name, icon, startDate, endDate, details, hostName, locationBuilding, locationRoom} = req.body;
-  let locationName = locationBuilding + ' ' + locationRoom;
+  let locationName = `${locationBuilding} ${locationRoom}`;
 
   // let location = req.body.location;
   let rgb = hexToRgb(req.body.color);
@@ -70,36 +74,36 @@ app.post('/event', function (req, res) {
   let arrayParams = [name, icon, startDate, endDate, details, hostName, locationName, location, color];
 
   db.any(query, arrayParams)
-      .then(function () {
+      .then(() => {
         res.send('Inserted into DB');
-      }).catch(function (err) {
+      }).catch(err => {
         console.error(err);
-        res.send('Error ' + err);
+        res.send(`Error ${err}`);
       });
 });
 
-app.get('/init', function (req, res) {
+app.get('/init', (req, res) => {
   db.any('CREATE TABLE locations ( id SERIAL PRIMARY KEY, startDate timestamptz, location POINT, userId TEXT)')
-    .then(function (result) {
+    .then(result => {
       res.send('Database (events) Initialized!');
-    }).catch(function (err) {
+    }).catch(err => {
       console.error(err);
-      res.send('Error ' + err);
+      res.send(`Error ${err}`);
     });
 });
 
-app.get('/hits', function (req, res) {
+app.get('/hits', (req, res) => {
   res.send({count: config.hitCount});
 });
 
-app.get('/feed', function (req, res) {
+app.get('/feed', (req, res) => {
   let today = db.any('SELECT * FROM events WHERE startDate > TIMESTAMP \'today\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\'');
   let tomorrow = db.any('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\'');
   let upcoming = db.any('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'7 day\'');
 
   Promise
     .all([today, tomorrow, upcoming])
-    .then(function (sections) {
+    .then(sections => {
       console.log(sections);
 
       let payload = {
@@ -108,43 +112,43 @@ app.get('/feed', function (req, res) {
       };
 
       res.send(payload);
-    }).catch(function (err) {
+    }).catch(err => {
       console.log('err', err);
     });
 });
 
-app.get('/db', function (req, res) {
+app.get('/db', (req, res) => {
   // THIS IS A HORRIBLE SQL VULNERABILITY, BUT I'M SURE YOU KNOW
-  db.any('SELECT * FROM ' + req.query.name)
-  .then(function (result) {
+  db.any(`SELECT * FROM ${req.query.name}`)
+  .then(result => {
     console.log(result['rows']);
     res.send(result.rows);
-  }).catch(function (err) {
+  }).catch(err => {
     console.error(err);
-    res.send('Error ' + err);
+    res.send(`Error ${err}`);
   });
 });
 
-app.get('/drop', function (req, res) {
+app.get('/drop', (req, res) => {
   // THIS IS A HORRIBLE SQL VULNERABILITY, BUT I'M SURE YOU KNOW
-  db.any('TRUNCATE ' + req.query.name)
-    .then(function (result) {
+  db.any(`TRUNCATE ${req.query.name}`)
+    .then(result => {
       console.log(result['rows']);
       res.send(result.rows);
-    }).catch(function (err) {
+    }).catch(err => {
       console.error(err);
-      res.send('Error ' + err);
+      res.send(`Error ${err}`);
     });
 });
 
-app.get('/delete', function (req, res) {
-  db.any('DELETE FROM ' + req.query.name + ' WHERE id = ' + req.query.id)
-    .then(function (result) {
+app.get('/delete', (req, res) => {
+  db.any(`DELETE FROM ${req.query.name} WHERE id = ${req.query.id}`)
+    .then(result => {
       console.log(result['rows']);
       res.send(result.rows);
-    }).catch(function (err) {
+    }).catch(err => {
       console.error(err);
-      res.send('Error ' + err);
+      res.send(`Error ${err}`);
     });
 });
 
