@@ -154,7 +154,7 @@ app.get('/feed', function(req, res) {
   .then(function(sections){
     console.log(sections);
     // connection already disposed here
-    var payload = {"sectionTitles":["Today","Tomorrow","This Week"],"sections":[sections]}
+    var payload = {"sectionTitles":["Today","Tomorrow","This Week"],"sections":sections}
     res.send(payload);
   })
   .catch(function(err){
