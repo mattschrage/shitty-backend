@@ -1,9 +1,9 @@
-import express from 'express';
-import bodyParser from 'body-parser';
+let express = require('express');
+let bodyParser = require('body-parser');
 let pgp = require('pg-promise')();
-import Fuse from 'fuse';
-import buildings from './buildings.json';
-import config from './config';
+let Fuse = require('fuse');
+let buildings = require('./buildings.json');
+let config = require('./config');
 
 let db = pgp(config.dbUrl);
 let app = express();
