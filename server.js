@@ -93,8 +93,7 @@ app.post('/event', function(req, res) {
         console.log(rgb);
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
 
-
-        startDate.setTime( startDate.getTime() + 5*60*1000 );
+        //startDate.setTime( startDate.getTime() + 5*60*1000 );
 
     //do some post processing ei. match up Location Name with actual geopoint
       location = searchBuildings(locationBuilding);
