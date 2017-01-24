@@ -98,8 +98,8 @@ app.post('/event', function(req, res) {
         var rgb = hexToRgb(req.body.color);
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
 
-        console.log(startDate);
-        startDate = toTimeZone(startDate, "EST");
+        console.log(startDate.toString() + "EST");
+        startDate = startDate + " EST";
         console.log(startDate);
 
         //startDate.setTime( startDate.getTime() + 5*60*1000 );
