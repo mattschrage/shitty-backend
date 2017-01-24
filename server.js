@@ -94,7 +94,7 @@ app.post('/event', function(req, res) {
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
 
 
-        //startDate.setTime( startDate.getTime() + 5*60*1000 );
+        startDate.setTime( startDate.getTime() + 5*60*1000 );
 
     //do some post processing ei. match up Location Name with actual geopoint
       location = searchBuildings(locationBuilding);
@@ -147,9 +147,9 @@ app.get('/hits', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  var today = db.any('SELECT * FROM events WHERE startDate > TIMESTAMP \'today\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\' ');
-  var tomorrow = db.any('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\' ');
-  var upcoming = db.any('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'7 day\'');
+  var today = db.any('SELECT * FROM events WHERE startDate > TIMESTAMP \'today\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\' ORDER BY startDate ASC');
+  var tomorrow = db.any('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\' ORDER BY startDate ASC');
+  var upcoming = db.any('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'7 day\' ORDER BY startDate ASC');
   Promise.all([today,tomorrow,upcoming])
   .then(function(sections){
     console.log(sections);
