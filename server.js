@@ -1,7 +1,8 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 let pgp = require('pg-promise')();
-let Fuse = require('fuse');
+let Fuse = require('fuse.js');
+
 let buildings = require('./buildings.json');
 let config = require('./config');
 
