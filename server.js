@@ -13,6 +13,7 @@ var pgp = require('pg-promise')();
 var database_url = process.env.DATABASE_URL || 'postgres://MattSchrage@localhost:5432/peekbackend';
 
 var db = pgp(database_url);
+var moment = require('moment');
 
 
 
@@ -77,6 +78,11 @@ function searchBuildings(name) {
 
 }
 
+function toTimeZone(time, zone) {
+    var format = 'YYYY/MM/DD HH:mm:ss ZZ';
+    return moment(time, format).tz(zone).format(format);
+}
+
 app.post('/event', function(req, res) {
     var name = req.body.name,
         icon = req.body.icon,
@@ -90,8 +96,11 @@ app.post('/event', function(req, res) {
         location = req.body.location;
         //convert hex to rgb
         var rgb = hexToRgb(req.body.color);
-        console.log(rgb);
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
+
+        console.log(startDate);
+        startDate = toTimeZone(startDate, "EST");
+        console.log(startDate);
 
         //startDate.setTime( startDate.getTime() + 5*60*1000 );
 
