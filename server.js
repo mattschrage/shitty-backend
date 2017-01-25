@@ -156,7 +156,7 @@ app.get('/hits', function(req, res) {
 app.get('/feed', function(req, res) {
   console.log("FEED");
   var today = db.query('SELECT * FROM events WHERE startDate > TIMESTAMP \'today\' - interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\' ORDER BY startDate ASC');
-  var tomorrow = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\' ORDER BY startDate ASC');
+  var tomorrow = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\' ORDER BY startDate ASC');
   var upcoming = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'7 day\' ORDER BY startDate ASC');
   Promise.all([today,tomorrow,upcoming])
   .then(function(sections){
