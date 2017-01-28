@@ -15,8 +15,6 @@ var database_url = process.env.DATABASE_URL || 'postgres://MattSchrage@localhost
 var db = pgp(database_url);
 var moment = require('moment');
 
-
-
 //var bodyParser = require('body-parser')
 
 //app.use(bodyParser.json())
@@ -151,6 +149,30 @@ app.get('/init', function(req, res) {
 
 app.get('/hits', function(req, res) {
   res.send({"count":"1234"});
+});
+
+app.get('/tz', function(req, res) {
+  pg.connect(database_url, function(err, client, done) {
+    client.query('show timezone', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       {     res.send(result); }
+    });
+  });
+});
+
+app.get('/now', function(req, res) {
+  pg.connect(database_url, function(err, client, done) {
+    client.query('SELECT now()', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       {     res.send(result); }
+    });
+  });
 });
 
 
