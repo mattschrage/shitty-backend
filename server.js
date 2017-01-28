@@ -163,6 +163,18 @@ app.get('/tz', function(req, res) {
   });
 });
 
+app.get('/est', function(req, res) {
+  pg.connect(database_url, function(err, client, done) {
+    client.query('SET TIME ZONE \'EST\'', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       {     res.send(result); }
+    });
+  });
+});
+
 app.get('/now', function(req, res) {
   pg.connect(database_url, function(err, client, done) {
     client.query('SELECT now()', function(err, result) {
