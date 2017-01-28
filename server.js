@@ -177,7 +177,7 @@ app.get('/est', function(req, res) {
 
 app.get('/now', function(req, res) {
   pg.connect(database_url, function(err, client, done) {
-    client.query('SELECT now()', function(err, result) {
+    client.query('SELECT now()::time', function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
@@ -190,9 +190,9 @@ app.get('/now', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  var today = db.query('SELECT * FROM events WHERE startDate > now()::time - interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\'::time + interval \'4 hours\' ORDER BY startDate ASC');
-  var tomorrow = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\'::time + interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\'::time + interval \'1 day\' ORDER BY startDate ASC');
-  var upcoming = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\'::time + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\'::time + interval \'7 day\' ORDER BY startDate ASC');
+  var today = db.query('SELECT * FROM events WHERE startDate::time > now()::time - interval \'4 hours\' AND startDate::time < TIMESTAMP \'tomorrow\'::time + interval \'4 hours\' ORDER BY startDate ASC');
+  var tomorrow = db.query('SELECT * FROM events WHERE startDate::time >= TIMESTAMP \'tomorrow\'::time + interval \'4 hours\' AND startDate::time < TIMESTAMP \'tomorrow\'::time + interval \'1 day\' ORDER BY startDate ASC');
+  var upcoming = db.query('SELECT * FROM events WHERE startDate::time >= TIMESTAMP \'tomorrow\'::time + interval \'1 day\' AND startDate::time < TIMESTAMP \'tomorrow\'::time + interval \'7 day\' ORDER BY startDate ASC');
   Promise.all([today,tomorrow,upcoming])
   .then(function(sections){
     console.log(sections);
