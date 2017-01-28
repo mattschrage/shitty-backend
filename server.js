@@ -122,7 +122,7 @@ app.post('/event', function(req, res) {
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
-      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
+      client.query('SET TIME ZONE \'EST\';INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color) values($1, $2, $3, $4, $5, $6, $7, $8, $9)',[name, icon, startDate, endDate, details, hostName, locationName, location, color], function(err, result) {
         done();
         if (err)
          { console.error(err); res.send("Error " + err); }
@@ -190,9 +190,9 @@ app.get('/now', function(req, res) {
 
 app.get('/feed', function(req, res) {
   console.log("FEED");
-  var today = db.query('SELECT * FROM events WHERE startDate > now() - interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\' ORDER BY startDate ASC');
-  var tomorrow = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\' ORDER BY startDate ASC');
-  var upcoming = db.query('SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'7 day\' ORDER BY startDate ASC');
+  var today = db.query('SET TIME ZONE \'EST\';SELECT * FROM events WHERE startDate > now() - interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'4 hours\' ORDER BY startDate ASC');
+  var tomorrow = db.query('SET TIME ZONE \'EST\';SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'4 hours\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'1 day\' ORDER BY startDate ASC');
+  var upcoming = db.query('SET TIME ZONE \'EST\';SELECT * FROM events WHERE startDate >= TIMESTAMP \'tomorrow\' + interval \'1 day\' AND startDate < TIMESTAMP \'tomorrow\' + interval \'7 day\' ORDER BY startDate ASC');
   Promise.all([today,tomorrow,upcoming])
   .then(function(sections){
     console.log(sections);
