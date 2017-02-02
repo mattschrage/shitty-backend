@@ -100,7 +100,8 @@ app.post('/event', function(req, res) {
         locationBuilding = req.body.locationBuilding,
         locationRoom = req.body.locationRoom,
         locationName = locationBuilding + " " + locationRoom;
-        location = req.body.location;
+        location = req.body.location,
+        email = req.body.email;
         //convert hex to rgb
         var rgb = hexToRgb(req.body.color);
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
@@ -131,7 +132,7 @@ app.post('/event', function(req, res) {
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
-      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color, verified) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)',[name, icon, startDate, endDate, details, hostName, locationName, location, color, false], function(err, result) {
+      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color, verified, email) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)',[name, icon, startDate, endDate, details, hostName, locationName, location, color, false, email], function(err, result) {
         done();
         if (err)
          { console.error(err); res.send("Error " + err); }
