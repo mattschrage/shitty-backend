@@ -95,8 +95,9 @@ app.post('/log', function(req, res) {
        { console.error(err); res.send("Error " + err); }
       else
        {
+          res.send('Inserted into DB'); }
          //res.redirect("http://heypeek.com");
-       }    //res.send('Inserted into DB'); }
+       }
     });
   });
   //Add to analytics Database
