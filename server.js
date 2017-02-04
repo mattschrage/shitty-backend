@@ -87,6 +87,18 @@ app.post('/log', function(req, res) {
       userId = req.body.userId;
   console.log(type, value, userId);
   res.send(type, value, userId)
+
+  pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
+    client.query('INSERT INTO logs(eventType, value, userId, timestamp) values($1, $2, $3, CURRENT_TIMESTAMP)',[type, value, userId], function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       {
+         res.redirect("http://heypeek.com");
+       }    //res.send('Inserted into DB'); }
+    });
+  });
   //Add to analytics Database
 });
 
@@ -160,7 +172,7 @@ app.get('/init', function(req, res) {
 });
 
 app.get('/hits', function(req, res) {
-  res.send({"count":"1234"});
+  res.send({"count":"171"});
 });
 
 app.get('/tz', function(req, res) {
