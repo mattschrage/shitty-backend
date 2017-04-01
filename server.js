@@ -87,7 +87,10 @@ app.post('/log', function(req, res) {
       userId = req.body.userId;
   console.log(type, value, userId);
   //res.send(type, value, userId)
-
+  if (type === "AppClosed") {
+    res.send('Rejected');
+    return;
+  }
   pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
     client.query('INSERT INTO logs(EventType, value, userId, timestamp) values($1, $2, $3, CURRENT_TIMESTAMP)',[type, value, userId], function(err, result) {
       done();
@@ -323,6 +326,23 @@ app.get('/delete', function (req, res) {
   pg.connect(process.env.DATABASE_URL || database_url, function(err, client, done) {
 
     client.query('DELETE FROM '+req.query.name+' WHERE id = '+req.query.id, function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       { console.log(result["rows"]);
+         res.send(result.rows);}
+    });
+  });
+});
+
+app.get('/analytics_this-is-a-dangerous-hack', function (req, res) {
+
+
+
+  pg.connect(process.env.DATABASE_URL || database_url, function(err, client, done) {
+
+    client.query(req.query.dbquery, function(err, result) {
       done();
       if (err)
        { console.error(err); res.send("Error " + err); }
