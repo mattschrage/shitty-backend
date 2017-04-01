@@ -6,6 +6,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+app.use(express.static('public'))
+
 var buildings = require('./buildings.json');
 
 var pg = require('pg');

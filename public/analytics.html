@@ -1,0 +1,268 @@
+<html>
+<head>
+  <title>analytics</title>
+
+</head>
+<body>
+  <input id = "day" type="text" placeholder="cohort who added email X days ago"/>
+  <input id = "left" type="text" placeholder="active starting x days ago"/>
+  <input id = "right" type="text" placeholder="active ending y days ago"/>
+  <button onclick="usersFromDayWhoAreActiveOverRange()">submit</button>
+  <button onclick="popularEventsOverRange()">popular events</button>
+  <button onclick="mostAddedToCalendarOverRange()">most added to calendar</button>
+  <button onclick="uniqueActiveUsersForDay()">Active users for day</button>
+  <button onclick="viewActiveUsersOverRange()">Active users for range</button>
+
+
+  <div id = "console">Data will appear here</div>
+</body>
+</html>
+
+<script>
+var base = "https://harvard-food.herokuapp.com/analytics_this-is-a-dangerous-hack"
+function httpGETAsync(url, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", url, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+function timeSince(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+        return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+        return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+        return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+        return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+        return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+}
+
+function mostAddedToCalendarOverRange () {
+  var left = document.getElementById('left').value;
+  var right = document.getElementById('right').value;
+
+  httpGETAsync(urlFor(
+    `SELECT DISTINCT o.value,
+    (
+       SELECT name
+       FROM events
+       WHERE id = CAST(o.value AS integer)
+    ),
+    (
+       SELECT COUNT(value)
+       FROM logs AS i
+       WHERE o.value = i.value
+       AND EventType LIKE 'AddedToCalender'
+       AND    timestamp > now() - interval '`+ left +`day'
+       AND    timestamp < now() - interval '`+ right +` day'
+    ) AS CalendarCount
+    FROM logs AS o WHERE EventType LIKE 'AddedToCalender' ORDER BY CalendarCount DESC;`
+  ), function (response){
+    output(response);
+  });
+
+}
+function viewEvent(id) {}
+
+function viewUserActivity (id) {
+  httpGETAsync(urlFor(
+  `SELECT o.EventType, timestamp,
+   (
+  	SELECT name
+      FROM events
+      WHERE id = CAST(o.value AS integer)
+      AND o.EventType LIKE  'ViewedEvent'
+   ) as EventName,
+   (
+   SELECT name
+      FROM events
+      WHERE id = CAST(o.value AS integer)
+      AND o.EventType LIKE  'AddedToCalender'
+   ) as AddedToCalender
+
+   FROM logs AS o WHERE userId LIKE '`+id+`' ORDER BY timestamp DESC;`),
+   function(response) {
+     output(response, false, function(key, value) {
+       if (key == "timestamp") {
+         var d = new Date (value);
+         return   (d.getMonth()+1) + "/" + d.getDate() + " " +
+                d.getHours() + ":" + d.getMinutes() + "<br> ("+ timeSince(d) +" ago)";
+       }
+
+       if (value == null) {
+         return "";
+       } else return value;
+     });
+   });
+}
+
+function viewActiveUsersOverRange () {
+  var left = document.getElementById('left').value;
+  var right = document.getElementById('right').value;
+
+  httpGETAsync(urlFor(
+    `CREATE TEMP TABLE all_users AS
+      SELECT distinct userId
+      , timestamp
+      , value
+      FROM   logs
+      WHERE  EventType LIKE 'AddedEmail'
+      ORDER BY timestamp DESC;`)
+  , function (r){
+      httpGETAsync(urlFor(`
+        SELECT distinct o.userId,
+        (
+           SELECT value
+           FROM all_users AS i
+           WHERE o.userId = i.userId
+        ) AS active_today
+        FROM logs AS o
+        WHERE timestamp > now() - interval '`+left+` day'
+        AND timestamp < now() - interval '`+right+` day';
+        `), function (response){
+          output(response, false, function(key, value) {
+            if (key == "userid") {
+              return "<a onclick=\"viewUserActivity('"+value+"')\" href=\"#\">view activity</a>";
+            } else {
+              return value;
+            }
+          });
+          // output("[{\"count\" : 2}]", true);
+        });
+  });
+}
+
+function popularEventsOverRange () {
+  var left = document.getElementById('left').value;
+  var right = document.getElementById('right').value;
+
+  httpGETAsync(urlFor(
+    `SELECT DISTINCT o.value,
+    (
+       SELECT name
+       FROM events
+       WHERE id = CAST(o.value AS integer)
+    ),
+    (
+       SELECT COUNT(value)
+       FROM logs AS i
+       WHERE o.value = i.value
+       AND EventType LIKE 'ViewedEvent'
+       AND    timestamp > now() - interval '`+ left +`day'
+       AND    timestamp < now() - interval '`+ right +` day'
+    ) AS ViewCount
+    FROM logs AS o WHERE EventType LIKE 'ViewedEvent' ORDER BY ViewCount DESC;`
+  ), function (response){
+    output(response);
+  });
+
+}
+
+function uniqueActiveUsersForDay () {
+  var day = document.getElementById('day').value;
+  httpGETAsync(urlFor(
+    `
+      SELECT count(distinct userId)
+      FROM   logs
+      WHERE    timestamp > now() - interval '`+ (parseInt(day) + 1) +` day'
+      AND    timestamp < now() - interval '`+ day +` day';`), function (response) {
+        output(response, true);
+         document.getElementById('day').value -= 1;
+      });
+
+}
+
+function usersFromDayWhoAreActiveOverRange () {
+  var day = document.getElementById('day').value;
+  var left = document.getElementById('left').value;
+  var right = document.getElementById('right').value;
+
+  httpGETAsync(urlFor(
+    `CREATE TEMP TABLE users_`+day+` AS
+      SELECT distinct userId
+      , timestamp
+      , value
+      FROM   logs
+      WHERE  EventType LIKE 'AddedEmail'
+      AND    timestamp > now() - interval '`+ (parseInt(day) + 1) +` day'
+      AND    timestamp < now() - interval '`+ day +` day'
+      ORDER BY timestamp DESC;`), function (r){
+        httpGETAsync(urlFor(`
+          SELECT DISTINCT o.value,
+          (
+             SELECT COUNT(value)
+             FROM logs AS i
+             WHERE o.userId = i.userId
+             AND timestamp > now() - interval '`+left+` day'
+             AND   timestamp < now() - interval '`+right+` day'
+          ) AS active_today
+          FROM users_`+ day +` AS o
+          ORDER BY active_today DESC;
+          `), function (response){
+            output(response);
+            document.getElementById('left').value -= 1;
+          })
+      })
+
+}
+function urlFor(query){
+console.log(query);
+  return base + "?dbquery="+encodeURI(query);
+}
+
+
+function output(str, append = false, formatData = function(key, value){return value}) {
+  var json = JSON.parse(str);
+  var count = 0;
+  var html = "<table><tr>";
+  for (var key in json[0]) {
+    if (json[0].hasOwnProperty(key)) {
+      html += "<th>" +key+ "</th>";
+    }
+  }
+  html += "</tr>";
+
+  for (var i in json) {
+    count++;
+    var row = json[i];
+    html += "<tr>";
+    for (var key in row) {
+      if (row.hasOwnProperty(key)) {
+        html += "<td>" +formatData(key, row[key])+ "</td>";
+      }
+    }
+    html += "</tr>";
+  }
+  html += "</table>";
+
+  html = "<span style = \"color:#ccc;\">"+count+" rows</span><br>" + html;
+  if (append) {
+    document.getElementById("console").innerHTML = html + document.getElementById("console").innerHTML;
+  } else {
+    document.getElementById("console").innerHTML = html;
+
+  }
+}
+
+</script>
