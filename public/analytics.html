@@ -260,14 +260,17 @@ function usersFromWeekWhoAreActiveOverRange () {
             var total = 0;
             var active = 0;
             output(response, false, function(key, value) {
-              total++;
+
               if (key == "active_today") {
-                active++;
+                if (value != "0") {
+                  active++;
+                }
+                total++;
               }
               return outputUserId(key, value);
             });
             outputString("Weekly Active Users",""+active+"/"+total+" = "
-                          + Math.round(active/total) +"%");
+                          + (active/total) +"%");
           })
       })
 
@@ -277,8 +280,8 @@ console.log(query);
   return base + "?dbquery="+encodeURI(query);
 }
 
-function outputString(title, string) {
-  var str =  JSON.stringify([{title : string}]);
+function outputString(key, string) {
+  var str =  JSON.stringify([{key : string}]);
   output(str, true);
 }
 
