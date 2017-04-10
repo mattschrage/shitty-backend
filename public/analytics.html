@@ -225,8 +225,9 @@ function usersFromDayWhoAreActiveOverRange () {
           `), function (response){
             output(response);
             document.getElementById('left').value -= 1;
-            document.getElementById('right').value -= 1;
-
+            if (document.getElementById('right').value > 0) {
+              document.getElementById('right').value -= 1;
+            }
           })
       })
 
