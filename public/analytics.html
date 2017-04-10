@@ -13,6 +13,7 @@
   <button onclick="mostAddedToCalendarOverRange()">most added to calendar</button>
   <button onclick="uniqueActiveUsersForDay()">Active users for day</button>
   <button onclick="viewActiveUsersOverRange()">Active users for range</button>
+  <button onclick="feedForRange()">Feed for range</button>
 
 
   <div id = "console">Data will appear here</div>
@@ -193,6 +194,18 @@ function uniqueActiveUsersForDay () {
         output(response, true);
          document.getElementById('day').value -= 1;
       });
+
+}
+
+function feedForRange() {
+  var left = document.getElementById('left').value;
+  var right = document.getElementById('right').value;
+  httpGETAsync(urlFor(
+    `
+      SELECT *
+      FROM   logs
+      WHERE    timestamp > now() - interval '`+ left +` day'
+      AND    timestamp < now() - interval '`+ right +` day';`), output);
 
 }
 
