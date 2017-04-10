@@ -340,7 +340,8 @@ app.get('/delete', function (req, res) {
 
 app.get('/analytics_this-is-a-dangerous-hack', function (req, res) {
 
-
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
   pg.connect(process.env.DATABASE_URL || database_url, function(err, client, done) {
 

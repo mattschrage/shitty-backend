@@ -4,10 +4,11 @@
 
 </head>
 <body>
-  <input id = "day" type="text" placeholder="cohort who added email X days ago"/>
-  <input id = "left" type="text" placeholder="active starting x days ago"/>
-  <input id = "right" type="text" placeholder="active ending y days ago"/>
-  <button onclick="usersFromDayWhoAreActiveOverRange()">submit</button>
+  <input id = "day" type="text" placeholder="Day"/>
+  <input id = "left" type="text" placeholder="Range start"/>
+  <input id = "right" type="text" placeholder="Range end"/>
+  <button onclick="usersFromDayWhoAreActiveOverRange()">Users from DAY who are active over range</button>
+  <button onclick="usersFromWeekWhoAreActiveOverRange()">Users from WEEK who are active over range</button>
   <button onclick="popularEventsOverRange()">popular events</button>
   <button onclick="mostAddedToCalendarOverRange()">most added to calendar</button>
   <button onclick="uniqueActiveUsersForDay()">Active users for day</button>
@@ -226,6 +227,39 @@ function usersFromDayWhoAreActiveOverRange () {
       })
 
 }
+
+function usersFromDayWhoAreActiveOverRange () {
+  var day = document.getElementById('day').value;
+  var left = document.getElementById('left').value;
+  var right = document.getElementById('right').value;
+
+  httpGETAsync(urlFor(
+    `CREATE TEMP TABLE users_`+day+` AS
+      SELECT distinct userId
+      , timestamp
+      , value
+      FROM   logs
+      WHERE  EventType LIKE 'AddedEmail'
+      AND    timestamp > now() - interval '`+ (parseInt(day) + 7) +` day'
+      AND    timestamp < now() - interval '`+ day +` day'
+      ORDER BY timestamp DESC;`), function (r){
+        httpGETAsync(urlFor(`
+          SELECT DISTINCT o.value,
+          (
+             SELECT COUNT(value)
+             FROM logs AS i
+             WHERE o.userId = i.userId
+             AND timestamp > now() - interval '`+left+` day'
+             AND   timestamp < now() - interval '`+right+` day'
+          ) AS active_today
+          FROM users_`+ day +` AS o
+          ORDER BY active_today DESC;
+          `), function (response){
+            output(response);
+          })
+      })
+
+}
 function urlFor(query){
 console.log(query);
   return base + "?dbquery="+encodeURI(query);
@@ -256,10 +290,10 @@ function output(str, append = false, formatData = function(key, value){return va
   }
   html += "</table>";
 
-  html = "<span style = \"color:#ccc;\">"+count+" rows</span><br>" + html;
   if (append) {
     document.getElementById("console").innerHTML = html + document.getElementById("console").innerHTML;
   } else {
+    html = "<span style = \"color:#ccc;\">"+count+" rows</span><br>" + html;
     document.getElementById("console").innerHTML = html;
 
   }
