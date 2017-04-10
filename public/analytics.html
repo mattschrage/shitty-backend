@@ -287,7 +287,7 @@ function outputString(string) {
   output(str, true);
 }
 
-function output(str, append = false, formatData = function(key, value){return outputUserId}) {
+function output(str, append = false, formatData = outputUserId) {
   var json = JSON.parse(str);
   var count = 0;
   var html = "<table><tr>";
