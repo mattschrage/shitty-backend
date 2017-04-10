@@ -267,7 +267,7 @@ function usersFromWeekWhoAreActiveOverRange () {
               return outputUserId(key, value);
             });
             outputString("Weekly Active Users",""+active+"/"+total+" = "
-                          + round(active/total) +"%");
+                          + Math.round(active/total) +"%");
           })
       })
 
