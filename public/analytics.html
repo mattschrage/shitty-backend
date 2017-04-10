@@ -84,6 +84,14 @@ function mostAddedToCalendarOverRange () {
   });
 
 }
+function outputUserId(key, value) {
+  if (key == "userid") {
+    return "<a onclick=\"viewUserActivity('"+value+"')\" href=\"#\">view activity</a>";
+  } else {
+    return value;
+  }
+}
+
 function viewEvent(id) {}
 
 function viewUserActivity (id) {
@@ -142,13 +150,7 @@ function viewActiveUsersOverRange () {
         WHERE timestamp > now() - interval '`+left+` day'
         AND timestamp < now() - interval '`+right+` day';
         `), function (response){
-          output(response, false, function(key, value) {
-            if (key == "userid") {
-              return "<a onclick=\"viewUserActivity('"+value+"')\" href=\"#\">view activity</a>";
-            } else {
-              return value;
-            }
-          });
+          output(response, false, outputUserId);
           // output("[{\"count\" : 2}]", true);
         });
   });
@@ -244,7 +246,7 @@ function usersFromWeekWhoAreActiveOverRange () {
       AND    timestamp < now() - interval '`+ day +` day'
       ORDER BY timestamp DESC;`), function (r){
         httpGETAsync(urlFor(`
-          SELECT DISTINCT o.value,
+          SELECT DISTINCT o.userId, o.value,
           (
              SELECT COUNT(value)
              FROM logs AS i
@@ -255,7 +257,17 @@ function usersFromWeekWhoAreActiveOverRange () {
           FROM users_`+ day +` AS o
           ORDER BY active_today DESC;
           `), function (response){
-            output(response);
+            var total = 0;
+            var active = 0;
+            output(response, false, function(key, value) {
+              total++;
+              if (key == "active_today") {
+                active++;
+              }
+              return outputUserId(key, value);
+            });
+            outputString("Weekly Active Users",""+active+"/"+total+" = "
+                          + round(active/total) +"%");
           })
       })
 
@@ -265,6 +277,10 @@ console.log(query);
   return base + "?dbquery="+encodeURI(query);
 }
 
+function outputString(title, string) {
+  var str =  JSON.stringify([{title : string}]);
+  output(str, true);
+}
 
 function output(str, append = false, formatData = function(key, value){return value}) {
   var json = JSON.parse(str);
