@@ -212,7 +212,7 @@ function usersFromDayWhoAreActiveOverRange () {
       AND    timestamp < now() - interval '`+ day +` day'
       ORDER BY timestamp DESC;`), function (r){
         httpGETAsync(urlFor(`
-          SELECT DISTINCT o.value,
+          SELECT DISTINCT o.userId, o.value,
           (
              SELECT COUNT(value)
              FROM logs AS i
@@ -225,6 +225,8 @@ function usersFromDayWhoAreActiveOverRange () {
           `), function (response){
             output(response);
             document.getElementById('left').value -= 1;
+            document.getElementById('right').value -= 1;
+
           })
       })
 
@@ -269,8 +271,8 @@ function usersFromWeekWhoAreActiveOverRange () {
               }
               return outputUserId(key, value);
             });
-            outputString("Weekly Active Users",""+active+"/"+total+" = "
-                          + (active/total) +"%");
+            outputString(""+active+"/"+total+" = "
+                          + (active/total) * 100 +"%");
           })
       })
 
@@ -280,12 +282,12 @@ console.log(query);
   return base + "?dbquery="+encodeURI(query);
 }
 
-function outputString(key, string) {
-  var str =  JSON.stringify([{key : string}]);
+function outputString(string) {
+  var str =  JSON.stringify([{"" : string}]);
   output(str, true);
 }
 
-function output(str, append = false, formatData = function(key, value){return value}) {
+function output(str, append = false, formatData = function(key, value){return outputUserId}) {
   var json = JSON.parse(str);
   var count = 0;
   var html = "<table><tr>";
