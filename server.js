@@ -114,6 +114,7 @@ app.post('/log', function(req, res) {
 
 app.get('/event', function(req, res) {
   var id = req.body.id;
+  console.log(id);
   pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
     client.query('SELECT * FROM events WHERE id = $1',[id], function(err, result) {
       done();
@@ -121,6 +122,8 @@ app.get('/event', function(req, res) {
        { console.error(err); res.send("Error " + err); }
       else
        {
+         console.log(result);
+
          res.send(result["rows"]);
        }    //; }
     });
