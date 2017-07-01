@@ -224,6 +224,7 @@ function usersFromDayWhoAreActiveOverRange () {
       AND    timestamp > now() - interval '`+ (parseInt(day) + 1) +` day'
       AND    timestamp < now() - interval '`+ day +` day'
       ORDER BY timestamp DESC;`), function (r){
+        alert(r);
         httpGETAsync(urlFor(`
           SELECT DISTINCT o.userId, o.value,
           (
@@ -302,6 +303,11 @@ function outputString(string) {
 }
 
 function output(str, append = false, formatData = outputUserId) {
+  try {
+    JSON.parse(str);
+  } catch (e) {
+    alert(e + ":\n" + str);
+  }
   var json = JSON.parse(str);
   var count = 0;
   var html = "<table><tr>";

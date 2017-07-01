@@ -22,7 +22,11 @@ var moment = require('moment');
 //app.use(bodyParser.json())
 //query for get; body for post
 
-
+// ////////SMS NOTIFICATIONS/////////////////
+// setInterval(function() {
+//   // check db for reminders
+// }, 1000 * 60);
+// ///
 
 app.post('/loc', function(req, res) {
 
@@ -107,6 +111,24 @@ app.post('/log', function(req, res) {
   });
   //Add to analytics Database
 });
+
+app.get('/event', function(req, res) {
+  var id = req.body.id;
+  pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
+    client.query('SELECT * FROM events WHERE id = $1',[id], function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else
+       {
+         res.send(result["rows"]);
+       }    //; }
+    });
+  });
+
+
+}
+
 
 app.post('/event', function(req, res) {
     var name = req.body.name,
