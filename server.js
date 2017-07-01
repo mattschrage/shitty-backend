@@ -113,8 +113,10 @@ app.post('/log', function(req, res) {
 });
 
 app.get('/event', function(req, res) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
   var id = req.query.id;
-  console.log(id);
   pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
     client.query('SELECT * FROM events WHERE id = $1',[id], function(err, result) {
       done();
@@ -122,8 +124,6 @@ app.get('/event', function(req, res) {
        { console.error(err); res.send("Error " + err); }
       else
        {
-         console.log(result);
-
          res.send(result["rows"]);
        }    //; }
     });
