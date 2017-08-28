@@ -17,6 +17,8 @@
     "pg": "4.x",
     "pg-promise": "*",
     "moment":"*",
-    "request":"*"
+    "request":"*",
+    "cron":"*"
+
   }
 }
