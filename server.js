@@ -556,7 +556,7 @@ app.get('/updates', function(req, res){
                        json: true,   // <--Very important!!!
                        body: postData
                    }, function (error, response, body){
-                       // console.log(response);
+                       console.log(response);
                    });
                  }
                  else {
@@ -575,6 +575,8 @@ app.get('/updates', function(req, res){
       }
     });
   });
+
+  res.send("updating...")
 });
 
 app.listen(process.env.PORT || 8000);
