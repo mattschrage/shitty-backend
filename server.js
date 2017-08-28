@@ -1,6 +1,130 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
+/////
+// Token needs to be generated every 60 days https://www.slickremix.com/facebook-60-day-user-access-token-generator/
+var fb_access_token    = '1417764994922669|LuV9cQ_Ew8L5k52sf81X_I6PkKM'
+var fb_pages_to_scrape = ['JFKJrForum','harvardartmuseums','OCSHarvard']
+var emoji_pool         = [['💬'], ['🎨','🖌','🖼'],['📊','📈','👔']]
+var host_name          = ['IOP Forum', 'Harvard Art Museum', 'OCS']
+var colors             = ['#2ecc71','#e74c3c','#9b59b6','#3498db','#f1c40f']
+var request = require('request');
+
+
+fb_pages_to_scrape.forEach(function(page, i) {
+  var endpoint =  'https://graph.facebook.com/v2.10/'+page+'/events?access_token='+fb_access_token;
+  request.get(endpoint,function(err,res,body){
+    if(res.statusCode === 200 ) {
+      //console.log(body);
+      console.log(page);
+      console.log(endpoint + '\n\n\n');
+
+      var payload = JSON.parse(body).data;
+      // console.log(payload);
+      payload.map(function(event){
+        // console.log(event.name);
+
+        Array.prototype.randomElement = function () {
+          return this[Math.floor(Math.random() * this.length)]
+        }
+        var postData = {};
+        postData.name = event.name;
+        postData.fbid = event.id
+        postData.icon =  emoji_pool[i].randomElement();
+        postData.color = colors.randomElement()
+        postData.startDate = event.start_time;
+        postData.details   = event.description
+        postData.locationBuilding   = event.place.name
+        if (event.place.location) {
+          postData.longitude = event.place.location.longitude
+          postData.latitude  = event.place.location.latitude
+        }
+
+        postData.hostName  = host_name[i]
+        postData.email = 'bot@heypeek.com'
+
+        pg.connect(database_url || process.env.DATABASE_URL, function(err, client, done) {
+
+          client.query('SELECT * FROM events WHERE fbid = $1',[event.id], function(err, result) {
+            done();
+            if (err){
+               console.error(err);
+            } else {
+               console.log('checking for fbid in db');
+               if(result["rows"].length == 0){
+                 console.log(postData);
+                 console.log('event does not exist... creating it');
+                 request({
+                     url: "https://lol.com",//"https://freefood-backend.herokuapp.com/event",
+                     method: "POST",
+                     json: true,   // <--Very important!!!
+                     body: postData
+                 }, function (error, response, body){
+                     // console.log(response);
+                 });
+               }
+               else {
+                 console.log('event exists... next!');
+               }
+             }
+          });
+        });
+
+
+
+      })
+
+
+
+    }
+  });
+});
+
+for (var i = 0; i < fb_pages_to_scrape.length; i++){
+  console.log(i);
+
+  var page = fb_pages_to_scrape[i];
+  // request fb page
+
+}
+// var CronJob = require('cron').CronJob;
+// var CronJob = require('cron').CronJob;
+// var job = new CronJob('0 0 * * *', function() {
+//   /*
+//    * Runs every weekday (Monday through Friday)
+//    * at 11:30:00 AM. It does not run on Saturday
+//    * or Sunday.
+//    */
+//
+//    for (var i = 0; i < fb_pages_to_scrape.length; i++){
+//      var page = fb_pages_to_scrape[i];
+//      var endpoint =  'https://graph.facebook.com/v2.10/'+page+'/events?access_token='+fb_access_token;
+//
+//      // request fb page
+//      request.get(endpoint,options,function(err,res,body){
+//        if(res.statusCode === 200 ) {
+//          console.log(body);
+//          console.log(body.data)
+//        }
+//      });
+//    }
+//      //parse page
+//
+//      //for each event check if the id already exists in the db
+//
+//      // if it doesn't add it
+//    }
+//
+//
+//   }, function () {
+//     /* This function is executed when the job stops */
+//   },
+//   true, /* Start the job right now */
+//   timeZone /* Time zone of this job. */
+// );
+
+/////
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -143,7 +267,8 @@ app.post('/event', function(req, res) {
         locationRoom = req.body.locationRoom,
         locationName = locationBuilding + " " + locationRoom;
         location = req.body.location,
-        email = req.body.email;
+        email = req.body.email,
+        fbid  = req.body.fbid;
         //convert hex to rgb
         var rgb = hexToRgb(req.body.color);
         var color  = "" + rgb.r / 255 + " " + rgb.g / 255 + " " + rgb.b / 255 + " " + 1.0;
@@ -174,7 +299,7 @@ app.post('/event', function(req, res) {
 
     console.log(name, icon, startDate, endDate, details, hostName, locationName, location, color);
     pg.connect(process.env.DATABASE_URL || database_url , function(err, client, done) {
-      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color, verified, email) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)',[name, icon, startDate, endDate, details, hostName, locationName, location, color, false, email], function(err, result) {
+      client.query('INSERT INTO events(name, icon, startDate, endDate, details, hostName, locationName, location, color, verified, email, fbid) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)',[name, icon, startDate, endDate, details, hostName, locationName, location, color, false, email, fbid], function(err, result) {
         done();
         if (err)
          { console.error(err); res.send("Error " + err); }
