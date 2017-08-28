@@ -551,7 +551,7 @@ app.get('/updates', function(req, res){
                    console.log(postData);
                    console.log('event does not exist... creating it');
                    request({
-                       url: "https://freefood-backend.herokuapp.com/event",//"https://freefood-backend.herokuapp.com/event",
+                       url: "http://harvard-food.herokuapp.com/event",//"https://freefood-backend.herokuapp.com/event",
                        method: "POST",
                        json: true,   // <--Very important!!!
                        body: postData
